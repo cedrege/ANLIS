@@ -210,3 +210,6 @@ Wird genutzt, wenn $x>1$.
 
 
 -> auflisten der einzelnen Winkelfunktionsbeziehungen. Dies kann zb. in dem einten Integral Vid von dem mathe peter gefunden werden...
+
+
+-> merge von deveManu in main hat funktioniert
