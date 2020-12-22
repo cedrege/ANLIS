@@ -10,20 +10,47 @@ $\frac{1}{x^2}\frac{1}{x^3}=\frac{1}{x^5}$\
 $\frac{1}{cos(x)^2}tan(x)=\frac{1}{cos(x)^2}\frac{sin(x)}{cos(x)}=\frac{sin(x)}{cos(x)^3}$\
 $\frac{\frac{a}{b}}{\frac{c}{d}}=\frac{a*d}{b*c}$
 
-## Funktionen allgemein
-Definitionsbereich/Urbildbereich: D(f), Menge der für x einsetzbaren Zahlen \
-Wertebereich/Bildbereich: W(f), Menge aller Funktionswerte y\
+## Funktionen
+**Definitionsbereich/Urbildbereich**: D(f), Menge der für x einsetzbaren Zahlen \
+**Wertebereich/Bildbereich**: W(f), Menge aller Funktionswerte y\
+**Pol**: eine einpunktige Definitionsläcke einer Funktion, wenn die Funktionswerte in jeder Umgebung des Punktes beliebig gross werden (Nenner wird Null).\
+**Asymptote**: eine Gerade, die sich dem Graphen einer Funktion beliebig genau annhähert.
+
 ![Funktionen](./pic/funktionen.jpg "Funktionen")
-Beschränktheit: Eine Funktion heisst beschränkt, wenn sie nach oben, unten oder beides beschränkt ist.\
-Monotonie: Eine Funktion heisst streng monoton wachsend/ fallend, wenn sie immer steigt/sinkt.
-Eine Funktion heisst monoton wachsend, wenn sie nie sinkt.
+**Beschränktheit**: Eine Funktion heisst beschränkt, wenn sie nach oben, unten oder beides beschränkt ist.\
+**Monotonie**: Eine Funktion heisst streng monoton wachsend/ fallend, wenn sie immer steigt/sinkt. Eine Funktion heisst monoton wachsend, wenn sie nie sinkt.
+
+### Intervalle
+Eine eckige Klammer gibt an, dass die entsprechende Intervallsgrenze zum Intervall gehört.\
+Eine runde Klammer gibt an, dass die entsprechende Intervallsgrenze nicht zum Intervall
+gehört.\
+Gelegentlich ist es nützlich für die Intervallgrenzen auch $-\infty$ bzw. $\infty$ zuzulassen:\
+$\Reals = (-\infty,\infty), \Reals+ = (0,\infty), \Reals- = (-\infty, 0), \Reals_0+ = [0,\infty), \Reals_0- = (-\infty, 0 ]$
+
+$I = [a, b] = {x \in \Reals  | a <= x <= b}$ : **abgeschlossenes Intervall**\
+$I = (a, b) = {x \in \Reals | a < x < b}$ : **offenes Intervall**\
+$I = (a, b] = {x \in \Reals | a < x <= b}$ : **halboffenes Intervall**
+![Intervall_Beispiel](./pic/intervall_beispiel.png "Intervall")
 
 ### Lineare Funktionen
 $y = mx + b$
 
+**Differenzenquotienten**: Steigung, $m = \frac{y_2 - y_1}{x_2 - x_1}$\
+**Steigung der Senkrechten**: $m_{senkrecht} = \frac{-1}{m}$\
+**Schnittpunkt zweier Geraden**: \
+Vorgehen: Funktionen gleichsetzen und nach x auflösen, anschliessend in eine der Funktionen einsetzen. 
+1. Genau eine Lösung
+2. Unendlich viele Lösungen
+3. Keine Lösung\
 
+**Schnittpunkt Polynom und Gerade**:\
+Schneidet man ein Polynom mit einer Gerade, dann ist die Anzahl der Schnittpunkte höchstens gleich dem Grad des Polynoms.\
+Vorgehen: Bei der Berechnung setzt man wieder zu Beginn die Funktionswerte gleich. Anschließend bringt man alles auf eine Seite und bestimmt die  Nullstellen  der neuen Funktion, falls nötig mit der Mitternachtsformel  oder duch Polynomdivision.
+**Mitternachtsformel**: $\frac{-b\pm\sqrt{b^2-4ac}}{2a}$
 ### Quadratische Funktionen
-$y = ax^2 + bx + c$
+$y = ax^2 + bx + c$\
+a: Öffnung
+
 
 ### Exponentialfunktionen
 $y = a * e^{b*x}$
