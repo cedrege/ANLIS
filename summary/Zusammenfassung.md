@@ -10,11 +10,19 @@ $\frac{1}{x^2}\frac{1}{x^3}=\frac{1}{x^5}$\
 $\frac{1}{cos(x)^2}tan(x)=\frac{1}{cos(x)^2}\frac{sin(x)}{cos(x)}=\frac{sin(x)}{cos(x)^3}$\
 $\frac{\frac{a}{b}}{\frac{c}{d}}=\frac{a*d}{b*c}$
 
+### Zahlen
+![Zahlenmenge](./pic/zahlenmenge.PNG "Zahlenmenge")
+
+
 ## Funktionen
 **Definitionsbereich/Urbildbereich**: D(f), Menge der für x einsetzbaren Zahlen \
 **Wertebereich/Bildbereich**: W(f), Menge aller Funktionswerte y\
 **Pol**: eine einpunktige Definitionsläcke einer Funktion, wenn die Funktionswerte in jeder Umgebung des Punktes beliebig gross werden (Nenner wird Null).\
-**Asymptote**: eine Gerade, die sich dem Graphen einer Funktion beliebig genau annhähert.
+**Asymptote**: eine Gerade, die sich dem Graphen einer Funktion beliebig genau annhähert.\
+**Gerade Funktion**: f ist achsensymmetrisch bezüglich der y-Achse und es gilt:\
+$f(-x) = f(x), \forall \in D(f)$ (für alle x im Definitionsbereich von f).\
+**Ungerade Funktion**: f ist punktsymmetrisch bezüglich dem Ursprung und es gilt:\
+$f(-x) = -f(x), \forall \in D(f)$
 
 ![Funktionen](./pic/funktionen.jpg "Funktionen")
 **Beschränktheit**: Eine Funktion heisst beschränkt, wenn sie nach oben, unten oder beides beschränkt ist.\
@@ -35,7 +43,13 @@ $I = (a, b] = {x \in \Reals | a < x <= b}$ : **halboffenes Intervall**
 ### Lineare Funktionen
 $y = mx + b$
 
-**Differenzenquotienten**: Steigung, $m = \frac{y_2 - y_1}{x_2 - x_1}$\
+**Proportionalität, Steigung**: Für a > 0 liegt die Gerade im I. und III. Quadranten und ist steigend. Für a < 0 liegt die Gerade im II. und IV. Quadranten und ist fallend. Für a = 0 ist die Gerade gleich der
+x-Achse! Für a > 0 steigt die Gerade von links nach rechts, für a < 0 fällt sie.\
+Ist die Steigung negativ, fällt die Gerade. Ist die Steigung Null, dann hat man eine
+horizontale Gerade.\
+Beispiel: y=3 -> horizontale Gerade
+
+**Differenzenquotient**: Steigung, $m = \frac{y_2 - y_1}{x_2 - x_1}$\
 **Steigung der Senkrechten**: $m_{senkrecht} = \frac{-1}{m}$\
 **Schnittpunkt zweier Geraden**: \
 Vorgehen: Funktionen gleichsetzen und nach x auflösen, anschliessend in eine der Funktionen einsetzen. 
@@ -47,30 +61,125 @@ Vorgehen: Funktionen gleichsetzen und nach x auflösen, anschliessend in eine de
 Schneidet man ein Polynom mit einer Gerade, dann ist die Anzahl der Schnittpunkte höchstens gleich dem Grad des Polynoms.\
 Vorgehen: Bei der Berechnung setzt man wieder zu Beginn die Funktionswerte gleich. Anschließend bringt man alles auf eine Seite und bestimmt die  Nullstellen  der neuen Funktion, falls nötig mit der Mitternachtsformel  oder duch Polynomdivision.
 **Mitternachtsformel**: $\frac{-b\pm\sqrt{b^2-4ac}}{2a}$
-### Quadratische Funktionen
-$y = ax^2 + bx + c$\
-a: Öffnung
 
+### Quadratische Funktionen
+**Stammfunktion**: $y = ax^2 + bx + c$\
+a: Öffnung
+c: y-Achsenabschnitt
 
 ### Exponentialfunktionen
-$y = a * e^{b*x}$
+Eine Funktion der $f(x) = a · b^x$ mit $b > 0$ und $b \ne 1$ heisst Exponentialfunktion. a heisst Anfangswert und b heisst Wachstumsfaktor. Für Definitions- und Wertebereich gilt: \
+$D(f) =\Reals, W(f) = \Reals+.$\
+**Stammfunktion**: $y = a * e^{b*x}$\
+$a^x = b  |  x=\log_a(b)$\
+Exp: sehr schnelles Wachstum\
+Log: sehr langsames Wachstum\
+Beispiel: $y =log_{10}x \iff x=10^y$\
+$y=log_ex =lnx \iff x = e^y = \exp(y)$
+1. $a^xa^y = a^{x+y}$
+2. $(a^x)^y=a^{xy}$
+3. $a^{-1}=\frac{1}{a^x}$
+4. $a^xb^x=(ab)^x$
+
+
+### Logarithmusfunktion
+Die Logarithmusfunktion ist die Umkehrfunktion der Exponentialfunktion, gespiegelt an der Winkelhalbierenden $y=x$\
+Die Logarithmusfunktionen sind nur für $x > 0$, d.h. nur in $\Reals+$ definiert
+1. $log_a (u*v)=log_a u+log_a v$
+2. $log_a (\frac{u}{v})=log_a u-log_a v$
+3. $log_a (b^n )=n*log_a b$
+
+$log_a 1=0$\
+$log_a a=1$\
+$a^(log_a b)=b$\
+$log_a (a^n )=n$\
+$log_{10} = log$
+
+### Konvex - konkav
+Der Graph der Funktion f heisst konvex, falls er eine Linkskurve durchführt, wenn man von
+links nach rechts geht. Andernfalls heisst der Graph konkav. Eine Gerade ist weder konvex noch
+konkav.
+![Konvex_konkav](./pic/konvex_konkav.PNG "Konvex/Konkav")
+
+### Potenzfunktionen
+Stammfunktion: $y= a(x-u)^n +b$\
+$n>0$: gerade: Parabel, $n$ ungerade: Wendeparabel\
+$n<0$: Hyperbel\
+$n \in \N$: Monom\
+Wachstum: langsamer als die Exponentialfunktion
+
+### Polynome, Ganzrationale Funktionen
+Stammfunktion: $a_nx^n + a_{n-1}x^{n-1}+...+a_1x+a_0$\
+$a_n$: Koeffizient\
+$n$: Grad des Polynoms. Die höchstens Potenz bestimmt den Grad des Polynoms.\
+$x$: unabhängige Variable\
+$y$: abhängige Variable\
+Der Faktor k vor dem Produkt der Nullstellen bewirkt eine Streckung oder Stauchung des
+Graphen in y-Richtung und bei einem Vorzeichenwechsel wird der Graph an der x-Achse gespiegelt.
+
+### Rationale Funktionen
+Rationale Funktionen sind Quotienten von Polynomen p und q.\
+Stammfunktion: $y=r(x)=\frac{p(x)}{q(x)}$
 
 ### Verschieben von Funktionen
 $f(x)=a*sin⁡(b*(x+c))+d$                
-a: strecken an Y-Achse mit Faktor a\
-b: stauchen an X-Achse mit Faktor b\
-c: verschieben nach links um c\
-d: verschieben nach oben um d
+$a$: strecken an Y-Achse mit Faktor $a$\
+$b$: stauchen an X-Achse mit Faktor $b$\
+$c$: verschieben nach links um $c$\
+$d$: verschieben nach oben um $d$
 
+**Merkregel**: Will man den Graph der Funktion $y = f(x)$ vom Ursprung in den Punkt (a, b) verschieben und zusätzlich in Richtung der y-Achse um den Faktor $\alpha$ skalieren (stauchen/strecken), dann lautet die neue Funktion:\
+$y - b = \alpha f(x - a) \iff y = \alpha f(x - a) + b.$
 
+Gegeben sei die Funktion $y = f(x)$
+1. Multiplikation einer Funktion $f(x)$ mit einer Konstanten $c \in \Reals$ dehnt den Graphen vertikal (falls $c > 1$) oder staucht ihn vertikal (falls $0 < c < 1$). Ein negatives Vorzeichen ($c < 0$) spiegelt den Graphen zusätzlich an der x-Achse.
+2. Ersetzt man $y$ durch $y - b$ wird der Graph um $b$ nach oben verschoben (falls $b > 0$), bzw. nach unten (falls $b < 0$).
+3. Ersetzt man $x$ durch $x - a$ wird der Graph um $a$ nach rechts verschoben (falls $a > 0$),
+bzw. nach links (falls $a < 0$).
 
+### Nullstellen
+$x_0: y=f(x_0)=0$\
+**Nullstellenform**: $y=a(x-x_1)(x-x_2)$
+
+### Asymptote
+**vertikale Asymptote**: Nenner = 0 setzen\
+**horizontale Asymptote**: \
+Zählergrad > Nennergrad => Asymptote bei $y=0$, Beispiel: $\frac{2*(x^0)}{x}$\
+Zählgrad = Nennergrad => $\frac{4x^2}{2x^2}=\frac{4}{2}=>y=2$
+**schiefe Asymptote**: Zählergrad um 1 grösser als Nennergrad -> Polynomdivision
+Beispiel: 
+![Polynomdivision](./pic/polynomdivision.PNG "Polynomdivision")
+siehe anderes Beispiel: https://www.gut-erklaert.de/mathematik/polynomdivision.html
+
+### Zusammengesetzte Funktion
+Funktion 1: $A=f(r)=\pi r^2$\
+Funktion 2: $r = g(t) = 1 + t$\
+Es gilt: $A = f(g(t)) = (f \circ g)=\pi(1+t)^2$\
+$f$ ist die äussere Funktion (welche zuletzt angewendet wird) und $g$ die innere Funktion (welche zuerst angewendet wird).\
+Bei folgenden Beispielen gilt $u(x)$ als äussere Funktion und $v(x)$ als innere Funktion.\
+**Klammer**:  $f(x) = 2*(x^2-4)^{10}$\
+$u(x)= 2*x^{10}, v(x) =x^2-4$\
+**Wurzel**: $f(x)=\sqrt{x-1} = (x-1)^{\frac{1}{2}}$\
+$u(x)= \sqrt{x}, v(x) =x-1$\
+**Exponent**: $f(x) = 7*3^{x^2-1}$\
+$u(x) = 7*3^x,v(x)=x^2-1$\
+Darstellung im Venndiagram der Funktion $e^{\cos(x^2-1)}$:
+![Venndiagram_beispiel](./pic/venndiagram_beispiel.PNG "Venndiagram")
 
 ### Umkehrfunktionen
+Beachte: $f^{-1}$ steht für die Umkehrfunktion von f, d.h. $f^{-1} \ne \frac{1}{f}$\
+Umkehrfunktion existiert, falls es zu jedem $y$ genau ein $x$ gibt. Oder anders: Falls der Graph höchstens einmal von Parallelen zur x-Achse geschnitten wird. \
+$f^{-1} =x \iff f(x) =y$\
+**injektiv**: zu jedem y höchstens 1 x-Wert.\
+**surjektiv**: zu jedem y mindestens 1 x-Wert.\
+**bijektiv**: Funktion ist surjektiv und injektiv.\
+Vorgehen: Gleichung nach x auflösen und x mit y vertauschen\
+![injektiv_surjektiv](./pic/injektiv_surjektiv.PNG "Injektiv/Surjektiv")
+Beispiele:
+![Umkehrfunktionen](./pic/umkehrfunktionen.PNG "Umkehrfunktionen")
 
-
-
-### Polynome
-TODO:
+### Bogenlänge/Radiant, Trigonometrie
+![Trigonometrie](./pic/trigonometrie.PNG "Trigonometrie")
 
 ## Folgen, Reihen
 TODO:
