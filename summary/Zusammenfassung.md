@@ -2,17 +2,45 @@
 
 ## Grundlagen
 ### Algebra
-TODO:
+
+
 
 #### Brüche
 $\frac{1}{x^2}\frac{1}{x^3}=\frac{1}{x^5}$\
-$\frac{1}{cos(x)^2}tan(x)=\frac{1}{cos(x)^2}\frac{sin(x)}{cos(x)}=\frac{sin(x)}{cos(x)^3}$
+$\frac{1}{cos(x)^2}tan(x)=\frac{1}{cos(x)^2}\frac{sin(x)}{cos(x)}=\frac{sin(x)}{cos(x)^3}$\
+$\frac{\frac{a}{b}}{\frac{c}{d}}=\frac{a*d}{b*c}$
 
+## Funktionen allgemein
+Definitionsbereich/Urbildbereich: D(f), Menge der für x einsetzbaren Zahlen \
+Wertebereich/Bildbereich: W(f), Menge aller Funktionswerte y\
+![Funktionen](./pic/funktionen.jpg "Funktionen")
+Beschränktheit: Eine Funktion heisst beschränkt, wenn sie nach oben, unten oder beides beschränkt ist.\
+Monotonie: Eine Funktion heisst streng monoton wachsend/ fallend, wenn sie immer steigt/sinkt.
+Eine Funktion heisst monoton wachsend, wenn sie nie sinkt.
 
-## Funktionen
 ### Lineare Funktionen
-Die Formel für eine Lineare Funktion ist folgende:\
 $y = mx + b$
+
+
+### Quadratische Funktionen
+$y = ax^2 + bx + c$
+
+### Exponentialfunktionen
+$y = a * e^{b*x}$
+
+### Verschieben von Funktionen
+$f(x)=a*sin⁡(b*(x+c))+d$                
+a: strecken an Y-Achse mit Faktor a\
+b: stauchen an X-Achse mit Faktor b\
+c: verschieben nach links um c\
+d: verschieben nach oben um d
+
+
+
+
+### Umkehrfunktionen
+
+
 
 ### Polynome
 TODO:
