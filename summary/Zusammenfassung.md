@@ -11,7 +11,7 @@ $\frac{1}{cos(x)^2}tan(x)=\frac{1}{cos(x)^2}\frac{sin(x)}{cos(x)}=\frac{sin(x)}{
 $\frac{\frac{a}{b}}{\frac{c}{d}}=\frac{a*d}{b*c}$
 
 ### Zahlen
-![Zahlenmenge](./pic/zahlenmenge.PNG "Zahlenmenge")
+![Zahlenmenge](./pic/zahlenmenge.png "Zahlenmenge")
 
 
 ## Funktionen
