@@ -30,7 +30,7 @@ $\Reals = (-\infty,\infty), \Reals+ = (0,\infty), \Reals- = (-\infty, 0), \Reals
 $I = [a, b] = {x \in \Reals  | a <= x <= b}$ : **abgeschlossenes Intervall**\
 $I = (a, b) = {x \in \Reals | a < x < b}$ : **offenes Intervall**\
 $I = (a, b] = {x \in \Reals | a < x <= b}$ : **halboffenes Intervall**
-![Intervall_Beispiel](./pic/intervall_beispiel.png "Intervall")
+![Intervall_Beispiel](./pic/intervall_beispiel.PNG "Intervall")
 
 ### Lineare Funktionen
 $y = mx + b$
