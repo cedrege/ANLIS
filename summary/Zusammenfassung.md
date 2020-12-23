@@ -175,15 +175,114 @@ $f^{-1} =x \iff f(x) =y$\
 **bijektiv**: Funktion ist surjektiv und injektiv.\
 Vorgehen: Gleichung nach x auflösen und x mit y vertauschen\
 ![injektiv_surjektiv](./pic/injektiv_surjektiv.PNG "Injektiv/Surjektiv")
-Beispiele:
+Beispiele:\
 ![Umkehrfunktionen](./pic/umkehrfunktionen.PNG "Umkehrfunktionen")
 
 ### Bogenlänge/Radiant, Trigonometrie
 ![Trigonometrie](./pic/trigonometrie.PNG "Trigonometrie")
 
 ## Folgen, Reihen
-TODO:
+Eine Folge kann wie folgt beschrieben werden:
+1. Aufzählen der Glieder
+2. Bildungsgesetz (explizit): $a_n$ für n-ten Wert direkt erkennbar
+3. Rekursionsvorschrift (implizit): Ergibt sich auf vorherigen Gliedern
 
+### Arithmetische Folge
+Differenz d zweier beliebiger aufeinanderfolgender Glieder $a_n$ und $a_{n+1}$ sind konstant.\
+Eindeutig beschrieben durch 2 Grössen: 
+1. durch ein beliebiges Glied $a_n$ und die Differenz d, oder
+2. durch zwei beliebige Glieder $a_n$ und $a_{n+k}$.
+
+### Summe der Glieder einer Arithmetischen Folge
+$a_1 + a_2 + ... + a_n = \sum\limits_{k=1}^na_k = na_1 + d\frac{n(n-1)}{2}=n\frac{a_1+a_n}{2}$\
+$n$: Anzahl Glieder\
+$a_1$: 1. Glied\
+$a_n$: letztes Glied
+
+### Geometrische Folge
+Quotient q zweier beliebiger aufeinanderfolgenden Glieder $a_n$ und $a_{n+1}$ konstant sind.\
+Eindeutig beschrieben durch 2 Grössen:
+1. durch ein beliebiges Glied $a_n$ und den Quotienten q, oder
+2. durch zwei beliebige Glieder $a_n$ und $a_{n+k}$\
+$q = \frac{a_{n+1}}{a_n}$
+
+### Rechnen mit Folgen
+1. Eine Folge ($a_n$) multipliziert man mit einer (reellen) Zahl $\lambda$, indem man jedes Glied der Folge mit dieser Zahl multipliziert: $\lambda(a_n) = (\lambda a_n)$
+2.  Zwei Folgen ($a_n$) und ($b_n$) addiert man, indem man entsprechende Glieder addiert: $(a_n) + (b_n) = (a_n + b_n)$
+3. Ein Folge ($a_n$) hiesst konstante Folge, falls $a_n = c \in \R, \forall n \in \N$.
+
+**Streng monoton zunehmend**: Jedes Glied ist grösser als das vorherige Glied ($a_{n+1} > a_n$)\
+**beschränkt**: Glieder sind auf einen gewissen Bereich ("Teppich") eingeschränkt, wird auch mit Epsilon $\epsilon$ gekennzeichnet: $|a_n| \leqslant c$
+
+### Grenzwert einer Folge - Rechenregeln
+Falls die Folge ($a_n$) gegen a und die Folge ($b_n$) gegen b konvergiert (annähert)
+1. $\lim\limits_{n\rightarrow\infty}(a_n+b_n)=\lim\limits_{n\rightarrow\infty}(a_n)+\lim\limits_{n\rightarrow\infty}(b_n)=a+b$
+2. $\lim\limits_{n\rightarrow\infty}(a_n*b_n)=\lim\limits_{n\rightarrow\infty}(a_n)*\lim\limits_{n\rightarrow\infty}(b_n)=a*b$
+3. $\lim\limits_{n\rightarrow\infty}(\frac{a_n}{b_n})=\frac{\lim\limits_{n\rightarrow\infty}(a_n)}{\lim\limits_{n\rightarrow\infty}(b_n)}=\frac{a}{b}$ bei $b \ne 0$ und $b_n \ne 0$
+
+#### Trick - Erweitern
+![Grenzwert_erweitern](./pic/grenzwert_erweitern.PNG "Grenzwert_erweitern")
+
+#### Natürliche Grenzwerte
+1. $\lim\limits_{n\rightarrow\infty}(1+\frac{\alpha}{n})^n=e^{\alpha}$, $\forall \alpha \in \R$
+2. $\lim\limits_{n\rightarrow\infty}(n^ke^{-n})=0$, $\forall k \in \N$
+3. $\lim\limits_{n\rightarrow\infty}(\sqrt[n]{n})=1$ 
+4. $\lim\limits_{n\rightarrow\infty}(\sqrt[n]{a})=1$, $(a>0)$
+5. $\lim\limits_{n\rightarrow\infty}(\sqrt[n]{a_1^n+...+a_p^n})$=max{$a_1,...,a_p$}, ($a_k>0, k=1,...,p$)
+
+### Folge der n-ten Partialsummen
+Bedeutet n Glieder addieren. Mithilfe der Summe einer endlichen geometrischen Reihe.\
+$a_1+a_{1q}+a_{1q^2}+...+a_{1q^{n-1}}=\sum\limits_{k=0}^{n-1}a_1q^k=a_1\frac{q^n-1}{q-1}$\
+$a_1$: 1. Glied, $n$: Anzahl Glieder, $q$: Quotient\
+Bei Anwendung der Formel kann $n\rightarrow \infty$ verwendet werden, so erhält man unendlich viele Glieder.\
+Falls Grenzwert exisitert:\
+$\sum\limits_{k=1}^{\infty}a_k=\lim\limits_{n\rightarrow\infty}s_n=\lim\limits_{n\rightarrow\infty}\sum\limits_{k=1}^{n}a_k$\
+Unendliche geometrische Reihe: \
+$a_1+a_{1q}+a_{1q^2}+a_{1q^3}+...=\sum\limits_{k=0}^{\infty}a_1q^k=\frac{a_1}{1-q}$ falls $|q|<1$\
+
+### Harmonische Reihe
+$\sum\limits_{k=1}^{\infty}\frac{1}{k}=\lim\limits_{n\rightarrow\infty}(1+\frac{1}{2}+\frac{1}{3}+...+\frac{1}{n})$
+
+### Konvergenzkriterien
+Es muss unbedingt unterschieden werden zwischen der Reihe $\sum\limits_{k=1}^{\infty}a_k$ und der Folge der Glieder dieser Reihe $(a_k) =(1,\frac{1}{2},\frac{1}{3},...)$.\
+  * Falls die Reihe $\sum\limits_{k=1}^{\infty}a_k$ konvergiert, dann gilt $\lim\limits_{k\rightarrow\infty}a_k=0$ (die Glieder einer
+konvergenten Reihe bilden eine Nullfolge). (Die Reihe 1+2+3+4+5 konvergiert nicht, da die Glieder dieser Reihe keine Nullfolge bilden)
+  * Bilden die Glieder einer Reihe keine Nullfolge divergiert die Reihe.
+  * Bilden die Glieder einer Reihe eine Nullfolge, dann kann die Reihe konvergieren oder divergieren. (geom./harm. Reihe, bspw. ($\frac{1}{\sqrt{1}}+\frac{1}{\sqrt{2}}+\frac{1}{\sqrt{3}}+\frac{1}{\sqrt{4}}+..., p=\frac{1}{2}$)
+  * Die Reihe $\sum\limits_{k=1}^{\infty}\frac{1}{k^p}$ konvergiert für $p > 1$ und divergiert für $p \leqslant 1$. Bspw. ($\frac{1}{1}+\frac{1}{2}+\frac{1}{3}+\frac{1}{4}+...$) konvergiert.
+
+
+**Absolute Konvergenz**: Die Reihe $\sum\limits_{k=1}^{\infty}a_k$ heisst absolut konvergent, falls die Reihe $\sum\limits_{k=1}^{\infty}|a_k|$ konvergiert. Konvergiert die 1. Reihe aber nicht die 2. Reihe, dann nennt man die Reihe **bedingt
+konvergent**. Falls eine Reihe absolut konvergiert, dann konvergiert sie.
+
+#### Quotientenkriterium
+Sei $\sum\limits_{k=0}^{\infty}a_k$ eine Reihe mit Gliedern, die nicht verschwinden und $\rho = \lim\limits_{k\rightarrow\infty}(\frac{|a_{k+1}|}{|ak|})$. Dann gilt:
+1. Falls $\rho < 1$ dann konvergiert die Reihe (sogar) absolut
+2. Falls $\rho > 1$ dann divergiert die Reihe (sogar) absolut
+3. Falls $\rho = 1$ dann kann die Reihe sowohl konvergieren wie auch divergieren (weitere Untersuchungen sind nötig).
+
+#### Wurzelkriterium (optional)
+Sei $\sum\limits_{k=0}^{\infty}a_k$ und $\rho = \lim\limits_{k\rightarrow\infty}(\sqrt[k]{|a_k|})$. Dann gilt:
+1. Falls $\rho < 1$ dann konvergiert die Reihe (sogar) absolut
+2. Falls $\rho > 1$ dann divergiert die Reihe (sogar) absolut
+3. Falls $\rho = 1$ dann kann die Reihe sowohl konvergieren wie auch divergieren (weitere Untersuchungen sind nötig).
+   
+#### Majorantenkriterium (optional)
+Sei $\sum\limits_{k=0}^{\infty}a_k$ eine konvergente Reihe und es gelte $|bn| \leqslant a_n$ ab einer festen Gliednummer $n_0$. Dann konvergiert auch die Reihe
+$\sum\limits_{k=0}^{\infty}|b_k|$
+
+#### Leibnizkriterium (für alternierende Reihen)
+Ist ($a_k$) eine positive, monoton fallende Nullfolge, dann konvergiert die alternierende Reihe $\sum\limits_{k=0}^{\infty}(-1)^ka_k$ . Fehler beim Abbruch nach $n$ Gliedern:
+$|\sum\limits_{k=0}^{\infty}(-1)^ka_k-\sum\limits_{k=0}^{n-1}(-1)^ka_k|\leqslant a_n$
+
+### Konvergenz Rechenregeln
+1. Notwendige Bedingung, damit die Reihe $\sum\limits_{n=1}^{\infty}a_n$ konvergiert ist, dass ihre Glieder eine Nullfolge bilden, d.h. $\lim\limits_{n\rightarrow\infty}a_n = 0$
+2. Eine konvergente Reihe bleibt konvergent, wenn man endlich viele Glieder verändert,
+weglässt oder dazunimmt.
+3. Eine konvergente Reihe darf gliedweise mit einer Konstanten $c \in \R$ multipliziert werden, wobei gilt\ 
+$c*\sum\limits_{n=1}^{\infty}a_n=\sum\limits_{n=1}^{\infty}c*a_n$
+4. Die Summe (Differenz) zweier konvergenter Reihen ist konvergent wobei gilt\
+$\sum\limits_{n=1}^{\infty}a_n \pm \sum\limits_{n=1}^{\infty}b_n= \sum\limits_{n=1}^{\infty}(a_n \pm b_n)$   
 
 ### Summenformeln
 Alle drei Beispiele anhand von $n$, $n^2$, $n^3$ 1-100:
@@ -201,7 +300,7 @@ $S=\sum\limits_{k=1}^n\frac{n^2(n+1)^2}{4}$
 
 
 ## Grenzwerte, Stetigkeit
-TODO:
+
 
 ## Differentialrechnung
 
