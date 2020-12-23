@@ -187,6 +187,13 @@ Eine Folge kann wie folgt beschrieben werden:
 2. Bildungsgesetz (explizit): $a_n$ für n-ten Wert direkt erkennbar
 3. Rekursionsvorschrift (implizit): Ergibt sich auf vorherigen Gliedern
 
+### Überprüfung auf Beschränktheit, Monotonie und Konvergenz
+1. Grenzwert berechnen (oder zumindest verdächtigen)
+2. Monotonie prüfen
+   1. $a_{n+1}-a_n>0 \iff$ **monoton wachsend**
+   2. $a_{n+1}-a_n<0 \iff$ **monoton fallend**
+3. Beschränktheit prüfen (obere oder untere Grenze)
+
 ### Arithmetische Folge
 Differenz d zweier beliebiger aufeinanderfolgender Glieder $a_n$ und $a_{n+1}$ sind konstant.\
 Eindeutig beschrieben durch 2 Grössen: 
@@ -222,6 +229,10 @@ Falls die Folge ($a_n$) gegen a und die Folge ($b_n$) gegen b konvergiert (annä
 
 #### Trick - Erweitern
 ![Grenzwert_erweitern](./pic/grenzwert_erweitern.PNG "Grenzwert_erweitern")
+
+#### Trick - Auseinandernehmen
+Beispiel:\
+![Grenzwert_auseinander](./pic/grenzwert_auseinander.PNG "Grenzwert_auseinander")
 
 #### Natürliche Grenzwerte
 1. $\lim\limits_{n\rightarrow\infty}(1+\frac{\alpha}{n})^n=e^{\alpha}$, $\forall \alpha \in \R$
