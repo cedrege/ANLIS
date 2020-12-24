@@ -262,7 +262,6 @@ konvergenten Reihe bilden eine Nullfolge). (Die Reihe 1+2+3+4+5 konvergiert nich
   * Bilden die Glieder einer Reihe eine Nullfolge, dann kann die Reihe konvergieren oder divergieren. (geom./harm. Reihe, bspw. ($\frac{1}{\sqrt{1}}+\frac{1}{\sqrt{2}}+\frac{1}{\sqrt{3}}+\frac{1}{\sqrt{4}}+..., p=\frac{1}{2}$)
   * Die Reihe $\sum\limits_{k=1}^{\infty}\frac{1}{k^p}$ konvergiert für $p > 1$ und divergiert für $p \leqslant 1$. Bspw. ($\frac{1}{1}+\frac{1}{2}+\frac{1}{3}+\frac{1}{4}+...$) konvergiert.
 
-
 **Absolute Konvergenz**: Die Reihe $\sum\limits_{k=1}^{\infty}a_k$ heisst absolut konvergent, falls die Reihe $\sum\limits_{k=1}^{\infty}|a_k|$ konvergiert. Konvergiert die 1. Reihe aber nicht die 2. Reihe, dann nennt man die Reihe **bedingt
 konvergent**. Falls eine Reihe absolut konvergiert, dann konvergiert sie.
 
@@ -309,9 +308,100 @@ $S=\sum\limits_{k=1}^n\frac{n}{6}(n+1)(2n+1)$
 Summe von $1^3$ bis $100^3$:\
 $S=\sum\limits_{k=1}^n\frac{n^2(n+1)^2}{4}$
 
-
 ## Grenzwerte, Stetigkeit
+### Tangentenproblem (Annäherung)
+Sekante (Linie durch 2 Punkte) betrachten, und einer der Punkte entlang des Graphen immer näher an den anderen Punkt setzen. So erhält man die Tangente
 
+### Flächenproblem (Annäherung)
+Fläche in Rechtecke einteilen und Breite der Rechtecke gegen 0 gehen lassen.
+
+### Grenzwerte
+Unterscheiden zwischen links- und rechtsseitiger Grenzwert, oft bei bspw. $|x|$. Wenn bei beiden das Gleiche rauskommt ist es der Grenzwert, **zweiseitiger** oder auch **einfacher** Grenzwert genannt.\
+$\lim\limits_{x\rightarrow a^-}f(x)=\lim\limits_{x\rightarrow a^+}f(x)$
+
+#### Linksseitiger Grenzwert
+Grenzwert, wenn man von links annähert.\
+$\lim\limits_{x\rightarrow a^-}f(x)$
+
+#### Rechtsseitiger Grenzwert
+Grenzwert, wenn man von rechts annähert.\
+$\lim\limits_{x\rightarrow a^+}f(x)$
+
+#### Uneigentlicher Grenzwert
+Grenzwerte, die unendlich sind. D.h, $f(x)$ wächst über alle Grenzen wenn man x gegen a gehen lässt. Kann auch bei links- und rechtsseitigen Grenzwerten vorkommen.\
+$\lim\limits_{x\rightarrow a}f(x)=\infty$ \
+Kann auch bei links- und rechtsseitigen Grenzwerten vorkommen.\
+$\lim\limits_{x\rightarrow a^+}f(x)=-\infty$ oder $\lim\limits_{x\rightarrow a^-}f(x)=+\infty$
+
+#### Grundlegene Grenzwerte
+
+1. $\lim\limits_{x\rightarrow a}k=k$ \
+Der Grenzwert einer Konstante ist die Konstante selber.
+2. $\lim\limits_{x\rightarrow a}x=a$\
+Der Grenzwert von x wenn sich x einer Konstante nähert ist die Konstante selber.
+3. $\lim\limits_{x\rightarrow 0^-}\frac{1}{x}=-\infty$
+4. $\lim\limits_{x\rightarrow 0^+}\frac{1}{x}=\infty$
+
+#### Rechenregeln Grenzwerte
+Diese Regeln gelten nur, falls die einzelnen Grenzwerte existieren!
+1. $\lim\limits_{x\rightarrow a}(\mu f(x) \pm \nu g(x))=\mu \lim\limits_{x\rightarrow\ a}f(x)+\nu \lim\limits_{x\rightarrow a}g(x)=\mu L_1 \pm \nu L_2$
+2. $\lim\limits_{x\rightarrow a}(f(x)g(x))=\lim\limits_{x\rightarrow\ a}f(x)\lim\limits_{x\rightarrow a}g(x)=L_1L_2$
+3. ist $L_2 \ne 0$ und g in einer Umgebung von a verschieden von 0, dann ist der Grenzwert des Quotienten gleich dem Quotient des Grentwertes\
+$\lim\limits_{x\rightarrow a}(\frac{f(x)}{g(x)})=\frac{\lim\limits_{x\rightarrow\ a}f(x)}{\lim\limits_{x\rightarrow a}g(x)}=\frac{L_1}{L_2}$
+
+#### Weitere Rechenregeln für Grenzwerte
+  * $\lim\limits_{x\rightarrow a}x^n=(\lim\limits_{x\rightarrow a}x)^n=a^n$
+  * $\lim\limits_{x\rightarrow a}(f(x))^n=(\lim\limits_{x\rightarrow a}f(x))^n$
+  * Für ein Polynom $p(x) = c_0 + c_1x + ··· + c_nx^n = \sum\limits_{k=0}^nc_kx^k$ gilt: \
+  $\lim\limits_{x\rightarrow a}p(x)=p(x) = c_0 + c_1a + ··· + c_na^n=p(a)$
+  * Für eine rationale Funktion $r(x) = \frac{p(x)}{q(x)}$ (dabei sind $p(x)$ und $q(x)$ Polynome) und eine $a \in \R$ gilt:\
+      1.  Falls $q(a) \ne 0$, dann ist $\lim\limits_{x \rightarrow a}r(x)=r(a)$
+      2.  Falls $q(a) = 0$ und $p(a) \ne 0$, dann existiert $\lim\limits_{x \rightarrow a}r(x)=r(a)$ nicht
+      3.  Falls $q(a) = 0$ und $p(a) = 0$, dann kann der Grenzwert existieren, muss aber nicht
+  * Sei $a \in \R \cup$ {$-\infty, \infty$}. Gilt dann $\lim\limits_{x\rightarrow c}g(x)=L$ und ist f im Punkt L stetig, dann gilt:
+    * $\lim\limits_{x\rightarrow a}f(g(x)) = f(\lim\limits_{x\rightarrow a}g(x))$
+    * insbesondere: $\lim\limits_{x\rightarrow a}|g(x)| = |\lim\limits_{x\rightarrow c}g(x)|$, falls $\lim\limits_{x\rightarrow a}g(x)$ existiert
+
+#### Stückweise definierte Funktion
+Eine Funktion, die unterschiedlich definiert ist. Ist mit einem Deifnitionsbereich versehen.
+Beispiel:\
+![stückweise_funktion](./pic/stückweise_funktion.PNG "stückweise_funktion")
+Aufzeichnen, falls man es sich nicht vorstellen kann.\
+Falls nötig, Grenzwert ausrechnen. Schauen, in welchen Definitionsbereich der Wert für x fällt.
+
+#### Squeezing-Theorem
+Liegt eine Funktion $f(x)$ zwischen zwei Funktionen $g(x)$ und $h(x)$, und ist der Grenzwert der beiden Funktionen gleich $L$, so ist auch der Grenzwert der Funktion $f(x)$ $L$.\
+$g(x) \leqslant f(x) \leqslant h(x)$ und $\lim\limits_{x\rightarrow c}g(x) = \lim\limits_{x\rightarrow c}h(x)=L$\
+$\lim\limits_{x\rightarrow c}f(x)=L$
+![squeezing_theorem](./pic/squeezing_theorem.PNG "squeezing_theorem")
+
+### Stetigkeit
+Salopp: eine Funktion f heisst stetig, wenn man deren Graphen zeichnen kann, **ohne den
+Stift absetzen zu müssen**. Eine Funktion heisst stetig, falls sie überall, d.h. $\forall x \in D(f)$ stetig ist. \
+f ist stetig in a, falls\
+$\lim\limits_{x\rightarrow a}f(x)=f(a)$
+
+#### Stetigkeit von Funktionen
+  * Summe u. Differenz stetiger Funktionen sind stetig.
+  * Der Quotient zweier stetiger Funktionen ist dort stetig, wo der Nenner nicht
+verschwindet.
+  * Polynome $P(x) = \sum\limits_{k=0}^n a_kx^k$ sind stetig
+  * Rationale Funktionen $r(x) = \frac{P(x)}{Q(x)}$ sind dort stetig, wo das Nennerpolynom $Q(x)$ nicht verschwindet.
+  * Sinus- $(sin x)$ und Kosinusfunktion $(cos x)$ sind stetig.
+  * Der Tangens ($tan x = \frac{sin x}{cos x}$) ist stetig, falls {cosx \ne 0$, d.h. falls $x \ne \frac{\pi}{2} + k\pi, k \in \Z$.
+  * Exponential- und Logarithmusfunktion sind in ihren Definitionsbereichen stetig
+  * Zusammensetzung stetiger Funktionen ist stetig.
+  * Eine zusammengesetzte Funktionen kann dort unstetig sein, wo eine der verwendeten
+Funktionen nicht stetig ist.
+
+### Regula Falsi
+Regula Falsi wird verwendet, um sich einer Nullstellen anzunähern. Eine Funktion in einem Intervall [a, b] hat eine Nullstelle, wenn sie stetig ist und wenn die beiden Werte eingesetzt in die Funktion f 1x positiv und 1x negativ sind ($f(a)f(b)<0$)
+1. 2 Werte bestimmen, wo die Nullstelle dazwischen ist, bspw. $x_0$ und $x_1$. Darauf achten, dass die Vorzeichen der eingesetzten Werte in f, also $f(x_0)$ und $f(x_1)$ ,unterschiedlich sein müssen.
+2. Werte in die Formel einsetzen
+$x_{neu}=\frac{x_0f(x_1)-x_1f(x_0)}{f(x_1)-f(x_0)}$
+3. 2 neue Werte wählen, bspw. $x_{neu} = x_2$ und $x_1$, Schritt wiederholen
+
+Geht auch in Python!
 
 ## Differentialrechnung
 
