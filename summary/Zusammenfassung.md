@@ -405,9 +405,19 @@ Geht auch in Python!
 
 ## Differentialrechnung
 
+**Sekante**: Linie durch 2 Punkte auf einem Graphen.
+**Tangente**: Falls der der Grenzwert des Differenzenquotienten($\frac{\Delta y}{\Delta x}$) für $\Delta x \rightarrow 0$ existiert, ist die Steigung der Tangente in einem Punkt definiert.
+**Differenzenquotient**: Steigung der Sekante, $\frac{\Delta y}{\Delta x}$
+**Differentialquotient**: Steigung der Tangente, $\lim\limits_{\Delta x \rightarrow 0}\frac{\Delta y}{\Delta x}= \lim\limits_{\Delta x \rightarrow 0}\frac{f(x_0+\Delta x)-f(x_0)}{\Delta x}$ Falls dieser Grenzwert existiert, ist die Funktion differenzierbar.
+
 ### Tangentengleichung
-TODO: wo gehört dies hin?\
-$y-y_0=m(x-x_0)$
+Liniearisierung von f in $x_0$: $y=f(x_0) + f'(x_0)(x-x_0)$
+
+### Newton-Raphson Verfahren
+Verfahren, um Nullstellen (auch Wurzel genannt) rauszufinden, wo andere Methoden nicht helfen, bspw. $f(x)=-x^3-4x+10=0$
+1. Tabelle anlegen, um 2 x Werte $x_0$ und $x_1$ zu finden. Achten, dass der f(x) Werte unterschiedliche Vorzeichen hat, d.h da wo der Übergang des y-Wertes vom Positiven ins Negative oder umgekehrt ist! 
+2. Einen der Werte, am einfachsten den f(x) Werte, der am nächsten von 0 ist, in die Formel einsetzen: $x_{neu}=x_0-\frac{f(x_0)}{f'(x_0)}$
+3. Verfahren wiederholen mit $x_{neu}$
 
 ### Ableitungen
 #### Produktregel
