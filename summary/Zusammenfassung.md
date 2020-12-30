@@ -236,7 +236,7 @@ Vorgehen:
 3. Integriere unbestimmt nach $u$
 4. Drücke $u$ wieder durch $x$ aus
 
-Die zweite Substitutionsregel ist flexibler und auf alle Integrale anwendbar. Die Idee ist, ein Teil des Integrals zu substituieren, damit die aus der Substitution resultierende Ableitung den Integranden einfacher zu intergrieren macht. Ander, noch im Integral vorhandene, Variabeln müssen entsprechend umgerechnet werden. Dies ist im Normalfall nicht immer sofort ersichtlich. Heisst, die Try and Error Taktik kommt zum Einsatz. Die Substitution *muss* im $u$-Intervall umkehrbar sein und somit durch $u=\phi^{-1}(x)$ ausdruckbar sein.\
+Die zweite Substitutionsregel ist flexibler und auf alle Integrale anwendbar. Die Idee ist, ein Teil des Integrals zu substituieren, damit die aus der Substitution resultierende Ableitung den Integranden einfacher zu intergrieren macht. Andere, noch im Integral vorhandene Variabeln, müssen entsprechend umgerechnet werden. Dies ist im Normalfall nicht immer sofort ersichtlich. Heisst, die Try and Error Taktik kommt zum Einsatz. Die Substitution *muss* im $u$-Intervall umkehrbar sein und somit durch $u=\phi^{-1}(x)$ ausdruckbar sein.\
 Für die Prüfung ist folgender Integralrechner zu empfehlen: https://www.integral-calculator.com. 
 
 Beispiel:
@@ -268,7 +268,7 @@ Vorgehen:
 2. Ersetze die $x$-Grenzen $a, b$ durch die u-Grenzen $g(a), g(b)$
 3. Integriere
 
-Das Integrieren bei bestimmten Integralen funktioniert identisch wie bei den unbestimmten. Einzig müssen die Grenzen von $x$ (Integralgrenzen) gemäss der Substitution angepasst werden. Dies geschieht indem die Grenzen durch den substituierten Teil (als Funktion angesehen) geschickt werden.
+Das Integrieren bei `bestimmten Integralen` funktioniert identisch wie bei den `unbestimmten Integralen`. Einzig müssen die Grenzen von $x$ (Integralgrenzen) gemäss der Substitution angepasst werden. Dies geschieht indem die Grenzen durch den substituierten Teil (als Funktion angesehen) geschickt werden.
 
 Beispiel:
 
@@ -279,15 +279,22 @@ so müssen die Grenzen $1,2$ jeweils $1^2$ respektive $2^2$ gerechnet werden. So
 <img src="./pic/fig_4.3.0.png_TODO" alt="fig 4.3.0" width="600"/>
 
 #### Zweite Substitutionsregel bei bestimmten Integralen
-TODO:
-Wichtige infos in diesen VIds:
+Theorem: Es gilt: $\int\limits_{a}^bf(x)dx=\int\limits_{\phi^{-1}(a)}^{\phi^{-1}(b)}f(\phi(u))\phi'(u)du$
 
-https://www.youtube.com/watch?v=vtyaO162fa4
+Vorgehen:
+1. Wähle eine geeignete invertierbare Substitutionsfunktion $\phi$
+2. Substituiere formal $x = \phi(u), dx = \phi'(u) du$
+3. Ersetze die $x$-Grenzen $a, b$ durch die $u$-Grenzen $\phi^{-1}(a), \phi^{-1}(b)$
+4. Integriere
 
-https://www.youtube.com/watch?v=AWN01OjmgWI
+Das Integrieren funktioniert gleich wie bei der zweiten Substitutionsregel für `unbestmmte Integrale`. Einzig müssen am Schluss die Integrationsgrenzen angepasst werden. Das Anpassen der Grenzen ist gleich wie bei der ersten Substitutionsregel für `bestimmte Integrale`.
 
+### Bemerkungen zur Integralsubstitution
 
-###  Rechenregel für Integrale
+<img src="./pic/fig_4.8.1.png_TODO" alt="fig 4.8.1" width="600"/>
+<img src="./pic/fig_4.8.2.png_TODO" alt="fig 4.8.2" width="600"/>
+
+### Rechenregel für Integrale
 **Umkehrung**\
 Wenn von einer grösseren Zahl zu einer kleineren integriert werden muss, können die Integrationswerte vertauscht werden. Es muss jedoch auch das Vorzeichen des Integrals gewechselt werden.\
 Beispiel:\
@@ -324,11 +331,11 @@ import sympy as sp
 sp.init_printing(use_latex='mathjax')
 x = sp.symbols("x")
 
-# calculate the quadratic average of a given integral within a fixed range
+# calculate the quadratic average of a given integral within a fixed border
 # TODO: Not yet fully working. need more examples to test it
-def mw_q(func, range):
-    normalization = 1 / (range[2] - range[1])
-    integral = sp.Integral(sp.Abs(func) ** 2, range)
+def mw_q(func, border):
+    normalization = 1 / (border[2] - border[1])
+    integral = sp.Integral(sp.Abs(func) ** 2, border)
     print("Integral")
     display(integral)
     integral_calculated = sp.sqrt(normalization * integral.doit())
@@ -337,10 +344,10 @@ def mw_q(func, range):
     print("Numerical evaluation of Integral")
     display(sp.N(integral_calculated))
 
-# calculate the linear average of a given integral within a fixed range
-def mw_lin(func, range):
-    normalization = 1 / (range[2] - range[1])
-    integral = sp.Integral(func, range)
+# calculate the linear average of a given integral within a fixed border
+def mw_lin(func, border):
+    normalization = 1 / (border[2] - border[1])
+    integral = sp.Integral(func, border)
     print("Integral")
     display(integral)
     integral_calculated = normalization * integral.doit()
