@@ -313,8 +313,25 @@ $\int\limits_{a}^bf(x)dx=\int\limits_{a}^cf(x)dx+\int\limits_{c}^bf(x)dx$\
 ![Stammfunktionen_beispiel](./pic/fig_4.2.0.svg_TODO "fig 4.2.0")
 
 ### Partielle Integration
-TODO: stimmt diese aussage -> wenn nicht splitten und entsprechen am richtigen ort einfügen; Partielle Integration kann bei bestimmten wie auch bei unbestimmten Integralen gleich angewandt werden.
-TODO
+_Partielle Integration_ kann bei `bestimmten` wie auch bei `unbestimmten Integralen` gleich angewandt werden. **Einzig muss bei `bestimmten Integralen` an die Grenzen gedacht werden**. Diese müssen jedoch nicht umgeschrieben werden während dem partiellen Integrieren. Ziel ist es, dass das Integral auf der rechten (RHS) Seite eingacher wird.
+
+Theorem: Es gilt: $\int {\underset{\uparrow}{u'(x)}} * {\underset{\downarrow}{v(x)}} dx=u(x) * (v)- \int u(x) * v'(x) dx$
+
+**Bemerkung**: Der nach oben gerichtete Pfeil ($\uparrow$) unter einer Funktion deutet an, dass diese Funktion auf der RHS überall in integrierter Form vorkommt. Der nach unten gerichteten Pfeil ($\downarrow$) deuetet an, dass diese
+Funktion auf der RHS nur unter dem Integral in abgeleiteter Form vorkommt.
+
+Vorgehen:
+1. Zerlege den Integranden in eine Produkt von zwei Faktoren
+2. Ein Faktor ist $u'(x)$, der andere ist $v(x)$
+3. Der erste Faktor $u'(x)$ kommt auf der RHS überall in integrierter Form, d.h. als $u(x)$ vor
+4. Der zweite Faktor $v(x)$ kommt auf der RHS nur unter dem Integral in abgeleiteter Form, d.h. als $v'(x)$ vor
+
+Es ist egal welcher der beiden Terme abgeleitet wird. Einzig bei $ln$ sollte drauf geachtet werden, dass der mit Prio abgeleitet wird.
+
+Beispiel:
+
+$\int \color{lightblue}{\underset{\downarrow}{x}} * \color{orange}{\underset{\uparrow}{cos(x)}} \color{normal}dx = \color{lightblue}x *  \color{orange}sin(x)  \color{normal}- \int \color{lightblue}1 *  \color{orange}sin(x)  \color{normal}dx \rArr x * sin(x) + cos(x) + C$\
+In diesem Beispiel ist es $+ cos(x)$, da $sin(x)$ aufgeleitet $-cos(x)$ ergeben und somit $- (-cos(x))$ gerechnet wird.
 
 ### Mittelwert eines Integrals
 **Linearer Mittelwert**\
