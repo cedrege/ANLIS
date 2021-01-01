@@ -419,15 +419,38 @@ Verfahren, um Nullstellen (auch Wurzel genannt) rauszufinden, wo andere Methoden
 2. Einen der Werte, am einfachsten den f(x) Werte, der am nächsten von 0 ist, in die Formel einsetzen: $x_{neu}=x_0-\frac{f(x_0)}{f'(x_0)}$
 3. Verfahren wiederholen mit $x_{neu}$
 
-### Ableitungen
+### Links- und rechttseitige Ableitung
+Bei Betragsfunktion: $y=f(x)=|x|$\
+**rechtsseitige Ableitung**: $f'(0^+)=\lim\limits_{\Delta x \rightarrow 0^+}\frac{|0+\Delta x|-|0|}{\Delta x}=\lim\limits_{\Delta x \rightarrow 0^+}\frac{\Delta x}{\Delta x}=1$\
+**linksseitige Ableitung**: $f'(0^-)=\lim\limits_{\Delta x \rightarrow 0^-}\frac{|0+\Delta x|-|0|}{\Delta x}=\lim\limits_{\Delta x \rightarrow 0^-}\frac{-\Delta x}{\Delta x}=-1$
+
+#### Ableitung elementarer Funktionen
+![Ableitungen_element1](./pic/ableitung_element1.PNG "Ableitungen_element1")
+![Ableitungen_element2](./pic/ableitung_element2.PNG "Ableitungen_element2")
+![Ableitungen_element3](./pic/ableitung_element3.PNG "Ableitungen_element3")
+### Ableitungsregeln
+#### Summenregel
+$[u(x)+v(x)]'=u'(x) + v'(x)$
+
 #### Produktregel
-$u' * v + v' * u$\
-Beispiel: $[x^2 * x^{10}]'=2*x^{10}+x^2*10x^9$
+$[u(x)*v(x)]'=u'(x) * v(x) + v'(x) * u(x)$\
+Beispiel: $[x^2 * x^{10}]'=2*x^{10}+x^2*10x^9$\
+Funktioniert auch bei mehr als 2 Produkten:\
+$[u*v*w]'=u'*v*w + u * v' * w + u * v * w'$
+
 #### Differenzregel
-TODO:
+**Tipp**: Brüche kann man auch mit der Produktregel lösen ($\frac{3}{4}=3*4^{-1}$)\
+$v(x) \ne 0$
+$[\frac{u(x)}{v(x)}]'=\frac{u'(x)*v(x)-u(x)*v'(x)}{(v(x))^2}=\frac{u'*v-u*v'}{v^2}$
 
 #### Kettenregel
-TODO:
+Die Ableitung von $f(g(x))$ ist gleich der Ableitung der äusseren Funktion ausgewertet
+an der Stelle der inneren Funktion $(f'(g(x)))$ multipliziert mit der Ableitung der
+inneren Funktion $(g'(x))$.\
+$\frac{d}{dx}[f(g(x))]=(f\circ g)'(x)=f'(g(x))*g'(x)$
+
+#### Ableitung der Umkehrfunktion
+$[f^{-1}(x)]=\frac{1}{f'(f^{-1}(x))}$
 
 ####  Logarithmische Differentiation
 TODO: https://www.youtube.com/watch?v=_AlvbhIrnWQ
@@ -439,6 +462,9 @@ TODO: https://www.youtube.com/watch?v=_AlvbhIrnWQ
 |$2e^x$|$2e^x$|  \|  |$20*e^{x^3}$|$60x^2*e^{x^3}$|
 |$10+3e^x$|$3e^x$|  \|  |$2x+e^{-4x^3}$|$2+(-12x^2)*e^{-4x^3}$|
 |$e^{2x}$|$2e^{2x}$|  \|  |$2x*e^{-3x^3}$|$2*e^{-3x^3}+2x*-9x^2*e^{-3x^3}$|
+Generell gilt: $[x^{\alpha}]'=\alpha x^{\alpha -1}$
+
+
 
 ### Implizite Ableitung
 TODO:
