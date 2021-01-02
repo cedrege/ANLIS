@@ -429,6 +429,7 @@ Solange beide Ableitungen dasselbe ergeben, ist f(x) differenzierbar.
 ![Ableitungen_element1](./pic/ableitung_element1.PNG "Ableitungen_element1")
 ![Ableitungen_element2](./pic/ableitung_element2.PNG "Ableitungen_element2")
 ![Ableitungen_element3](./pic/ableitung_element3.PNG "Ableitungen_element3")
+
 ### Ableitungsregeln
 #### Summenregel
 $[u(x)+v(x)]'=u'(x) + v'(x)$
@@ -496,6 +497,11 @@ Kritische Punkte bei $f'(x)=0$, Kandidaten für lokale Extrema. **Nicht alle Kan
 **lokales Maxima**: $f''(x_0) < 0$\
 **lokales Minima**: $f''(x_0) > 0$
 
+### Wende- und Sattelpunkte
+Notwendige und hinreichende Bedingung für einen Wendepunkt der Funktion $y = f(x)$ in $x_0$:\
+$f''(x_0)=0$ und $f'''(x_0) \ne 0$\
+Gilt zudem $f'(x0) = 0$ (horizontale Tangente), dann hat man in $x_0^$ einen Sattelpunkt.
+
 ### Schnittpunkt zweiter Kurven
 $tan\alpha_1=f_1'(x_0)$ und $tan\alpha_2=f_2'(x_0)$\
 $tan(\phi)=tan(\alpha_1 - \alpha_2)=\frac{f_1'(x_0)-f_2'(x_0)}{1+f_1'(x_0)f_2'(x_0)}$
@@ -512,7 +518,39 @@ Ab der 4. Ableitung schreibt man $f^{(4)}$\
 $\kappa (x)=\frac{y''(x)}{[1+(y'(x))^2]^{\frac{3}{2}}}$\
 **Krümmungsradius**: $\rho(x)=\frac{1}{|\kappa(x)|}$\
 **Linkskrümmung**: Bei $\kappa>0$\
-**Rechtskrümmung**: Bei $\kappa<0$
+**Rechtskrümmung**: Bei $\kappa<0$\
+**Krümmungskreismittelpunkt**: $\vec{x}_M(x)=\begin{bmatrix} x_M(x) \\ y_M(x) \end{bmatrix}=\begin{bmatrix} x-y'(x)\frac{1+(y'(x))^2}{y''(x)} \\ y(x) + \frac{1+(y'(x))^2}{y''(x)}\end{bmatrix}$\
+**Evolute**: Die Evolute ist die Menge aller Krümmungsmittelpunkte. Die Evolventenverzahnung liegt fast allen Zahnrädern zugrunde.
+
+### Parameterdarstellung von Kurven (SW7)
+Jedem Wert des Parameters $t$ wird dabei ein Punkt $\vec{x}(t)$ in der Ebene (oder auch im Raum) zugeordnet.\
+$\vec{x}(t)=\begin{bmatrix} x(t) \\ y(t) \end{bmatrix}$,$a \leqslant t \leqslant b$\
+Einen Vektor $\vec{x}(t)$ leitet man nach dem Parameter $t$ ab, indem man jede Komponente des Vektors nach $t$ ableitet.
+**Steigung der Tangente**: $y'=\frac{\dot{y}}{\dot{x}}$, wobei $\dot{y}$ die Ableitung von $y(t)$ und $\dot{x}$ die Ableitung von $x(t)$ nach $t$ ist.
+
+#### Gewöhnliche Zykloide
+Punkt eines Kreises wird auf einer Geraden abgerollt.\
+$\vec{x}(t)=\begin{bmatrix} x(t) \\ y(t) \end{bmatrix}=\begin{bmatrix} R(t-sin t) \\ R(1-cos t) \end{bmatrix}$,$0 \leqslant t \leqslant 2\pi$\
+
+![Zykloide](./pic/zykloide.PNG "Zykloide")
+
+### Polarkoordinaten (SW7)
+**Polar- zu kartesischen Koordinaten**: 
+  * $x=rcos \phi$
+  * $y=rsin \phi$
+
+**Kartesische zu Polarkoordinaten**:
+  * $r=\sqrt{x^2+y^2}$
+  * $tan\phi=\frac{y}{x}$
+
+#### Kardioid
+![Kardioid](./pic/kardioid.PNG "Kardioid")
+
+#### Ableitung von Polarkoordinaten
+Die (gewöhnliche) Ableitung einer Funktion wird bestimmt, indem man die Polarkoordinaten in Parameterform transformiert.
+$x=x(\phi)=r(\phi)cos\phi$
+$y=y(\phi)=r(\phi)sin\phi$
+$y'(x)=\frac{\dot{r}(\phi)sin\phi+r(\phi)cos\phi}{\dot{r}(\phi)cos\phi-r(\phi)sin\phi}$
 
 ### Kurvendiskussion
 Folgende Punkte sollen bei der Kurvendiskusion untersucht werden:
@@ -527,10 +565,26 @@ Folgende Punkte sollen bei der Kurvendiskusion untersucht werden:
 * **Krümmungskreismittelpunkt** (optional: **Evolute** und **Evolvente**, etc.)
 * Graph $G(f)$ der Funktion $f$ skizzieren
 
-TODO: von jedem genannten Punkt min ein Bsp in der Zusammenfassung haben...
+### Optimierungsprobleme
+Bei Extremalwertprobleme (od. Extremwert- oder Extremalaufgaben) sucht man einen
+Extremwert für ein bestimmtes Problem, z.B. maximales Volumen, minimale Distanz, etc.\
+1. Zuerst die Funktion bestimmen, welche das Problem beschreibt
+2. Aus den Nullstellen der Ableitung ($f'(x) = 0$) erhält man Kandidaten für Extrempunkte $x_0$ (mit zugehörigen Extremwerten f(x0))
+3. Mit den höheren Ableitungen überprüft man, ob es sich um Minima, Maxima oder
+Sattelpunkte handelt.
+4. Die Funktionswerte der gefundenen Maxima (Minima) und die Werte der Funktion an den
+Rändern werden jetzt verglichen. Das grösste (kleinste) ist der gesuchte Extremwert.
 
-#### Nullstellen
-TODO: https://www.youtube.com/watch?v=gaa9qiREPaE
+### Regel von de l'Hôpital
+Für unbestimmte Ausdrücke der Form $\frac{0}{0}$, $\frac{\infty}{\infty}$\
+$\lim\limits_{x\rightarrow a}\frac{f(x)}{g(x)}=\lim\limits_{x\rightarrow a}\frac{f'(x)}{g'(x)}$
+1. Überprüfe, ob $\lim\limits_{x\rightarrow a}\frac{f(x)}{g(x)}$ ein unbestimmter Ausdruck der Form 0/0 ist.
+2. Wenn ja, leite f und g separat ab und
+3. bestimme den Grenzwert $\lim\limits_{x\rightarrow a}\frac{f'(x)}{g'(x)}$. Wenn dieser endlich ist, oder $\pm \infty$, dann ist dies der gesuchte Grenzwert!\
+
+  * Unbestimmte Ausdrücke der Form $0 *\infty$ bringt man mittels der Identität $f(x)g(x)=\frac{f(x)}{\frac{1}{g(x)}}$ auf einen unbestimmten Ausdruck der Form 0/0.
+  * Unbestimmte Ausdrücke der Form $\infty-\infty$ lassen oft durch geeignete algebraische Umformungen auf unbestimmte Ausdrücke der Form 0/0 zurückführen.
+  * Unbestimmte Ausdrücke der Form $0^0$, $\infty ^0$ und $1^{\infty}$ schreiben wir in der Form $y = f(x)g(x)$, logarithmieren beide Seiten und erhalten dann mit $ln y = g(x) · ln(f(x))$ einen der oben besprochenen unbestimmten Ausdrücke.
 
 ## Integralrechnung
 TODO:
