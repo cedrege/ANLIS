@@ -377,6 +377,11 @@ def mw_lin(func, border):
 #mw_lin(sp.ln(x), (x, 1, 5))
 #mw_q(sp.sin(x), (x, 0, 2*sp.pi))
 ```
+### Trapez-Reihen
+TODO:
+
+### Simpson-Reihen
+TODO:
 
 ### Bogenlänge eines Integrals
 Für die normale Bogenlänge kann folgende Formel genutzt werden:\
@@ -402,7 +407,6 @@ def int_arc_length(function, range):
     print("Numerical evaluation of Integral")
     display(sp.N(integral.simplify().doit()))
 
-
 # RUN IT
 #int_arc_length(5*sp.cosh(x/5), (x, -7.15, 7.15))
 #int_arc_length(4.2*sp.ln(x**3), (x, 1, sp.E))
@@ -410,13 +414,92 @@ def int_arc_length(function, range):
 ```
 
 TODO: PYTHON -> Bogenlänge Poolarkoordinaten
-## Taylorreihen
 
-## Simpsonreihen
+## Summen Indextransformation
+Bei der Indextransformation ist es da Ziel, dass Potenzen nur noch als $x^m$ dastehen. Sieht man in der Summe also eine Potenz, wie z.B. $x^{(m-2)}$, so soll der Summenindex in diesem Fall um 2 reduziert werden. Dafür muss bei jedem vorkommendem $m$, $m+2$ geschrieben werden.
+
+Beispiele:
+
+$\sum\limits_{n=1}^\infty \frac{(-1)^{n+1}}{3n}x^{n+2} \rArr \sum\limits_{n=3}^\infty \frac{(-1)^{n-1}}{3(n-2)}x^{n}$
+
+$\sum\limits_{p=2}^\infty p(p-1)x^{p-2} \rArr \sum\limits_{p=0}^\infty (p+2)(p+1)x^{p}$
+
+## Potenzreihe
+Eine Potenzreihe in Potenzen von $(x - x_0)$ ist eine Reihe der Form
+$$\sum\limits_{h=0}^\infty a_k(x - x_0)^k=a_0+a_1(x - x_0)+a_2(x - x_0)^2+a_3(x - x_0)^3+...$$
+
+Hier sind $a_k$ ($k=0,1,2,...$) die **Koeffizienten**, $x_0$ der **Entwicklungspunkt** und $x$ die **Variable der Potenzreihe**.
+
+### Konvergenz einer Potenzreihe (Konvergenzradius)
+Für jede Potenzreihe gibt es ein $R \geqslant 0$, genannt **Konvergenzradius**, sodass die Potenzreihe konvergiert, falls $|x-x_0| < R$ oder divergiert, falls $|x-x_0| > R$. Wenn $|x-x_0| = R$ kann die Reihe entweder konvergieren wie auch divergieren.
+
+Für das Ausrechnen von $R$ gibt es zwei Möglichkeiten. (Jedoch muss dafür ein Grenzwert existieren!). Übrigens, $a_k$ ist im Normalfall alles unter der Summe auser das, was von $x$ abhängig ist.\
+Quotientenkriterium: $R=\displaystyle{\lim_{k \to \infty}}  \Bigl|\frac{a_k}{a_{k+1}}\Bigr|$
+
+Wurzelkriterium: $R=\bigg( \displaystyle{\lim_{k \to \infty}} \sqrt[k]{|{a_k}|} \bigg)^{-1}$
+
+TODO: RECHNEN MIT POTENZREIHEN
+
+TODO: PYTHON -> vllt machbar indem man iwie ak und ak+1 bekommt und dann ausrechnet
+
+## Binomialreihen
+TODO:
+
+## Taylor
+### Taylor-Polynom
+Das Taylor-Ploynom $T_n(x)$ stellt eine Funktion $f(x)$ an einer beliebigen stelle $x_0$ möglichst genau dar. Die Idee ist, dass man eine Summe über n Teilintevalle bildet, welche $f(x)$ immer genauer approximiert. Dies wird mit folgender Summe gemacht:
+$$T_n(x) = \sum\limits_{k=0}^n\frac{f^{(k)}(x_0)}{k!}(x-x_0)^k$$
+Den Wert der $f'ten$ Ableitung an Stelle von $x_0$ durch die Anzahl der Summenelemente ($k$) mal $(x - x_0)^k$.
+
+$T_n(x_0) = f(x_0) \rArr$ die 0.te Ableitung von $f$ und $T^n$ an der Stelle $x_0$ ist gleich\
+$T_n'(x_0) = f(x_0) \rArr$ die 1.te Ableitung von $f$ und $T^n$ an der Stelle $x_0$ ist gleich\
+$T_n''(x_0) = f(x_0) \rArr$ die 2.te Ableitung von $f$ und $T^n$ an der Stelle $x_0$ ist gleich\
+$T_n'''(x_0) = f(x_0) \rArr$ die 3.te Ableitung von $f$ und $T^n$ an der Stelle $x_0$ ist gleich\
+$T_n^{(4)}(x_0) = f(x_0) \rArr$ die 4.te Ableitung von $f$ und $T^n$ an der Stelle $x_0$ ist gleich\
+...\
+$T_n^{(n)}(x_0) = f(x_0) \rArr$ die n.te Ableitung von $f$ und $T^n$ an der Stelle $x_0$ ist gleich
+
+Sobald diese Reihe steht, kann das Taylor Polynom als Summe abgelesen werden.
+
+Beispiel an $sin(x)$, an Stelle $x_0 = 0$:
+
+Ausrechnen von den Ableitungen von $sin(x)$:\
+$f(0) = sin(0) = 0$\
+$f'(x) = cos(x) \rArr f'(0) = cos(0) = 1$\
+$f''(x) = -sin(x) \rArr f''(0) = -sin(0) = 0$\
+$f'''(x) = -cos(x) \rArr f'''(0) = -cos(0) = -1$\
+$f^{(4)}(x) = sin(x) \rArr f^{(4)}(0) = sin(0) = 0$
+
+Somit ist $T_n(x) = f(0) + f'(0)x + \frac{f''(0)}{2!}x^2 + \frac{f'''(0)}{3!}x^3 + \frac{f^{(4)}(0)}{4!}x^4 + \frac{f^{(5)}(0)}{5!}x^5 + ...$
+
+Ausgewertet: $x-\frac{x^3}{3!}+\frac{x^5}{5!}-\frac{x^7}{7!}+\frac{x^9}{9!} \approx sin(x)$
+
+Da $sin(0)$ und $-sin(0) = 0$ sind die Ableitung nicht in der Taylor Reihe enthalten. Aus der ausgewerteten Folge kann nun folgende Summe errechnet werden:
+$$\sum\limits_{k=0}^n(-1)^k\frac{x^{{2k+1}}}{(2k+1)!}$$
+
+Der Error beim Abbruch an einem bestimmten Glied kann folgendermassen errechnet werden: $\frac{f(x) - T_n(x)}{f(x)}$, wobei $T_n$ die ausgerechnete Folge bis zum Glied $n$ ist.
+
+### Taylor-Reihen
+Das Taylor-Ploynom wird zur Taylor-Reihe, sobald wir das $n$ des Taylor-Ploynomes gegen $\infty$ streben lassen.
+
+Beispiel anhand von $f(x) = sin(x)$ 
+
+Wir nehmen hier den weiter oben beschriebene Methode für das Berechnen des `Konvergenzradius` zur Hilfe.
+
+$T(x)=x-\frac{x^3}{3!}+\frac{x^5}{5!}-\frac{x^7}{7!}+\frac{x^9}{9!} = \sum\limits_{k=0}^\infty(-1)^k\frac{x^{{2k+1}}}{(2k+1)!} \rArr$ Potenz mit dem $k$. Glied ist also $(-1)^k\frac{x^{{2k+1}}}{(2k+1)!}$ und somit ist $a_k = \frac{(-1)^k}{(2k+1)!}$
+
+Nun den `Konvergenzradius` berechnen:
+
+$R=\displaystyle{\lim_{k \to \infty}} \Bigl|\frac{a_k}{a_{k+1}}\Bigr| = \displaystyle{\lim_{k \to \infty}} \Bigl|\frac{\frac{(-1)^k}{(2k+1)!}}{\frac{(-1)^{k+1}}{(2k+3)!}}\Bigr| = \displaystyle{\lim_{k \to \infty}} \Bigl|\frac{(-1)^k(2k+3)!}{(2k+1)!(-1)^{k+1}}\Bigr| = \displaystyle{\lim_{k \to \infty}} \frac{(2k+3)!}{(2k+1)!} = \displaystyle{\lim_{k \to \infty}} \frac{(2k+3)(2k+2)(2k+1)}{(2k+1)!} = \displaystyle{\lim_{k \to \infty}} (2k+3)(2k+2)=\infty$
+
+>Sidenote: $\frac{(-1)^k}{(-1)^{k+1}} = -1^1$, und davon wurde oben der Betrag genommen. Somit ist es weggefallen.
+
+## Restgleid nach Lagrange
+TODO:
 
 ## Mehrdimensionale Differentialrechnung
-
-
+TODO:
+https://www.geogebra.org/m/ptfcypHB
 
 ## Parameterdarstellung
 TODO: 
