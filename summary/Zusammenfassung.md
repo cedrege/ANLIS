@@ -405,9 +405,9 @@ Geht auch in Python!
 
 ## Differentialrechnung
 
-**Sekante**: Linie durch 2 Punkte auf einem Graphen.
-**Tangente**: Falls der der Grenzwert des Differenzenquotienten($\frac{\Delta y}{\Delta x}$) für $\Delta x \rightarrow 0$ existiert, ist die Steigung der Tangente in einem Punkt definiert.
-**Differenzenquotient**: Steigung der Sekante, $\frac{\Delta y}{\Delta x}$
+**Sekante**: Linie durch 2 Punkte auf einem Graphen.\
+**Tangente**: Falls der der Grenzwert des Differenzenquotienten($\frac{\Delta y}{\Delta x}$) für $\Delta x \rightarrow 0$ existiert, ist die Steigung der Tangente in einem Punkt definiert.\
+**Differenzenquotient**: Steigung der Sekante, $\frac{\Delta y}{\Delta x}$\
 **Differentialquotient**: Steigung der Tangente, $\lim\limits_{\Delta x \rightarrow 0}\frac{\Delta y}{\Delta x}= \lim\limits_{\Delta x \rightarrow 0}\frac{f(x_0+\Delta x)-f(x_0)}{\Delta x}$ Falls dieser Grenzwert existiert, ist die Funktion differenzierbar.
 
 ### Tangentengleichung
@@ -421,8 +421,9 @@ Verfahren, um Nullstellen (auch Wurzel genannt) rauszufinden, wo andere Methoden
 
 ### Links- und rechttseitige Ableitung
 Bei Betragsfunktion: $y=f(x)=|x|$\
-**rechtsseitige Ableitung**: $f'(0^+)=\lim\limits_{\Delta x \rightarrow 0^+}\frac{|0+\Delta x|-|0|}{\Delta x}=\lim\limits_{\Delta x \rightarrow 0^+}\frac{\Delta x}{\Delta x}=1$\
-**linksseitige Ableitung**: $f'(0^-)=\lim\limits_{\Delta x \rightarrow 0^-}\frac{|0+\Delta x|-|0|}{\Delta x}=\lim\limits_{\Delta x \rightarrow 0^-}\frac{-\Delta x}{\Delta x}=-1$
+**rechtsseitige Ableitung**: $f'(0^+)=\lim\limits_{\Delta x \rightarrow 0^+}\frac{f(x)-f(x_0)}{x-x_0}=\lim\limits_{\Delta x \rightarrow 0^+}\frac{f(x_0+\Delta x)-f(x_0)}{\Delta x}=\lim\limits_{\Delta x \rightarrow 0^+}\frac{\Delta x}{\Delta x}=1$\
+**linksseitige Ableitung**: $f'(0^-)=\lim\limits_{\Delta x \rightarrow 0^-}\frac{f(x)-f(x_0)}{x-x_0}=\lim\limits_{\Delta x \rightarrow 0^-}\frac{f(x_0+\Delta x)-f(x_0)}{\Delta x}=\lim\limits_{\Delta x \rightarrow 0^-}\frac{-\Delta x}{\Delta x}=-1$\
+Solange beide Ableitungen dasselbe ergeben, ist f(x) differenzierbar.
 
 #### Ableitung elementarer Funktionen
 ![Ableitungen_element1](./pic/ableitung_element1.PNG "Ableitungen_element1")
@@ -453,7 +454,11 @@ $\frac{d}{dx}[f(g(x))]=(f\circ g)'(x)=f'(g(x))*g'(x)$
 $[f^{-1}(x)]=\frac{1}{f'(f^{-1}(x))}$
 
 ####  Logarithmische Differentiation
-TODO: https://www.youtube.com/watch?v=_AlvbhIrnWQ
+Funktionen der Form $f(x)=[u(x)]^{v(x)}$\
+1. Auf beiden Seiten logarithmieren
+2. Ableiten mit Hilfe der Kettenregel
+3. Nach $f'(x)$ auflösen
+
 
 #### Ableitung Exponentialfunktion
 |f(x)|f'(x)|  \|  |f(x)|f'(x)|
@@ -464,10 +469,50 @@ TODO: https://www.youtube.com/watch?v=_AlvbhIrnWQ
 |$e^{2x}$|$2e^{2x}$|  \|  |$2x*e^{-3x^3}$|$2*e^{-3x^3}+2x*-9x^2*e^{-3x^3}$|
 Generell gilt: $[x^{\alpha}]'=\alpha x^{\alpha -1}$
 
-
-
 ### Implizite Ableitung
-TODO:
+Kurven in der Form $F(x,y)=0$, Auflösung nach y nicht möglich\
+1. Gliedweise nach x ableiten, wobei $y=y(x)$ als Funktion von x betrachtet wird
+2. Gleichung nach $y'=y'(x)$ lösen\
+
+Beispiel: $x^2=y^3 |\frac{d}{dx}$\
+$2x=3y^2*y'|$ nach y' auflösen\
+$y'=\frac{2x}{3y^2}$
+
+### Das Differential
+Das Differential wird verwendet, um die wahre Änderung von $\Delta y$ zu approximieren. Wird auch in der Fehlerberechnung benutzt.\
+**Exakte/Wahre Änderung**: $\Delta y=f(x_0 +\Delta x)-f(x_0)$\
+**Differential**: $\Delta f= df =dy =f'(x)dx$\
+Hinweis: Hier ist dx die Differenz der x-Werte $(x - x_0)$
+![Rechenregeln Differentiale](./pic/regeln_differential.PNG "Rechenregeln Differentiale")
+
+### Monotonie
+  * Gilt $f'(x) > 0$ in einem Intervall I, dann ist $f$ dort **streng monoton wachsend**. Im Fall $f'(x) \geqslant 0$ **monoton wachsend**.
+  * Gilt $f'(x) < 0$ in einem Intervall I, dann ist $f$ dort **streng monoton fallend**. Im Fall $f'(x) \leqslant 0$ **monoton fallend**.
+
+### Lokale (oder relative) Extrema
+Kritische Punkte bei $f'(x)=0$, Kandidaten für lokale Extrema. **Nicht alle Kandidaten sind lokale Extrema!** Notwendige Bedingung, dass die differenzierbare Funktion $y =  (x)$ in $x_0$ ein lokales Extremum hat ist das Verschwinden der 1. Ableitung.\
+**Maxima**: $f(x)  \leqslant f(x_0)$\
+**Minima**: $f(x) \geqslant f(x_0)$\
+**lokales Maxima**: $f''(x_0) < 0$\
+**lokales Minima**: $f''(x_0) > 0$
+
+### Schnittpunkt zweiter Kurven
+$tan\alpha_1=f_1'(x_0)$ und $tan\alpha_2=f_2'(x_0)$\
+$tan(\phi)=tan(\alpha_1 - \alpha_2)=\frac{f_1'(x_0)-f_2'(x_0)}{1+f_1'(x_0)f_2'(x_0)}$
+
+### Höhere Ableitungen
+Ab der 4. Ableitung schreibt man $f^{(4)}$\
+**Geometrische Bedeutung**: \
+  * Gilt $f''(x) > 0$ in einem Intervall I, dann weist f dort eine **Linkskrümmung** auf. Wir sagen f ist konvex.
+  * Gilt $f''(x) < 0$ in einem Intervall I, dann weist f dort eine **Rechtskrümmung** auf. Wir sagen f ist konkav.
+
+**In der Physik**: $x(t)$ ist der Ort eines Teilchens auf der x-Achse (oder im $\R^3$) zum Zeitpunkt t. Es gilt $x(t)=h(t)=h_0+v_0t-\frac{g}{2}t^2$
+ 
+### Krümmung
+$\kappa (x)=\frac{y''(x)}{[1+(y'(x))^2]^{\frac{3}{2}}}$\
+**Krümmungsradius**: $\rho(x)=\frac{1}{|\kappa(x)|}$\
+**Linkskrümmung**: Bei $\kappa>0$\
+**Rechtskrümmung**: Bei $\kappa<0$
 
 ### Kurvendiskussion
 Folgende Punkte sollen bei der Kurvendiskusion untersucht werden:
