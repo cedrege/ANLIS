@@ -514,7 +514,20 @@ $$f(x) = \sum\limits_{k=0}^n\frac{f^{(k)}(x_0)}{k!}(x-x_0)^k + R_n(x)$$
 Die Funktion muss eben einmal mehr differenzierbar sein, sonst gäbe es ja keinen Rest und $f(x) = R_n(x)$
 
 Das Restglied ergibt sich druch:
-$$R_n(x) = \frac{f^{(n+1)}(c)}{(n+1)!}(x-x_0)^{n+1}$$
+$$|R_n(x)| = \bigg| \frac{f^{(n+1)}(c)}{(n+1)!}x^{n+1}\bigg|$$ 
+$f^{(n+1)}(c)$ ist die $n+1$ Ableitung der Funktion. Davon soll der Max-Wert genommen werden, da ja der Fehler maximal so gross sein kann, wie auch dieser Wert ist. 
+
+> Zudem, wenn es eine alternierende Reihe ist, ist der Fehler maximal der des $n+1$-ten Gliedes nach dem Abbruch.
+
+**Beispiel**
+
+Anhand von $sin(x)$ an Stelle $x_0 = 0$ entwickelt. Da diese Funktion auch abgeleitet nie grösser als 1 werden kann, wird 1 als Max-Wert eingesetzt.
+
+$|R_n(x)| = \bigg| \frac{f^{(n+1)}(c)}{(n+1)!}x^{n+1}\bigg| \leq \frac{1}{(n+1)!}|x|^{n+1}$\
+Man sieht also, dass für ein bestimmtes $x$ nur ein genügend grossen $n$ eingesetzt werden muss.
+
+### Konvergenz Taylor-Reihe zusammen mit dem Restgleid
+Die Taylor-Reihe von $f$ an der Stelle $x_0$ konvergiert in ihrem Konvergenzbereich genau dann gegen $f(x)$ wenn das $n$. Restglied nach Lagrange $R_n(x)=f(x)-\sum\limits_{k=0}^n\frac{f^{(k)}(x_0)}{k!}(x-x_0)^k$ für $n \rightarrow \infty$ gegen $0$ konvergiert.
 
 ## Rechnen mit Potenzreihen
 ### Differenzieren
@@ -545,8 +558,27 @@ Dafür müssen wir $-2x^2$ (da - + - = +) mit $z$ ersetzen. Nun kann die Funktio
 $\frac{1}{1+2x^2}=1-2x^2+4x^4-8x^6+16x^8-.+...$
 
 ## Mehrdimensionale Differentialrechnung
-TODO:
-https://www.geogebra.org/m/ptfcypHB
+
+### Konturlinien
+Wolfram alpha nutzen ;)
+
+### Partielle Ableitung
+
+### Gradient
+
+#### Gradient an einem Punkt
+
+### Richtungsableitung
+Wenn in der Aufgabe stehen würde, dass man den Gradienten nicht dafür nutzen darf steht alles auf den Slides SW13 ab Slide 27! Es macht jedoch keinen Sinn alles aufzuführen, da es mit dem Gradienten 100 mal einfacher ist! Nun zu Thema:
+
+Für eine anständige (sprich differenzierbare) Funktion kann die Richtungsableitung von $f$ im Punkt $x_0$ in Richtung des Einheitsvektors $e$ mit Hilfe des Gradienten bestimmt werden:
+
+Als Info: Um aus $\vec{a}$ einen Einheitsvector zu machen muss er selbst duch seine Länge geteilt werden. $\frac{\vec{a}}{|\vec{a}|}$ Die länge (mit den beiden || dargestellt), kann berechnet werden, indem alle Werte im Quadrat **ADDIERT** werden und dann von diesem Resultat die Wurzel gezogen wird. (pythagoras)
+
+Die Richtungsableitung kann folgendermassen berechnet werden:
+$$D_ef(x_0)=\nabla f(x_0) \bullet e$$
+Diese Gleichung sagt aus, dass man dien Gradienten einer Funktion nehmen soll und diesen mit dem nomierten Richtungsvektor Scalar multiplizieren soll.\
+Das Resultat sagt dann aus, wie ein Unit Step in die Richtung des nomierten Richtungsvektor den Wert der Funktion ändern wird. 
 
 ## Parameterdarstellung
 TODO: 
