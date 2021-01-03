@@ -418,7 +418,7 @@ TODO: PYTHON -> Bogenlänge Poolarkoordinaten
 ## Summen Indextransformation
 Bei der Indextransformation ist es da Ziel, dass Potenzen nur noch als $x^m$ dastehen. Sieht man in der Summe also eine Potenz, wie z.B. $x^{(m-2)}$, so soll der Summenindex in diesem Fall um 2 reduziert werden. Dafür muss bei jedem vorkommendem $m$, $m+2$ geschrieben werden.
 
-Beispiele:
+**Beispiele**
 
 $\sum\limits_{n=1}^\infty \frac{(-1)^{n+1}}{3n}x^{n+2} \rArr \sum\limits_{n=3}^\infty \frac{(-1)^{n-1}}{3(n-2)}x^{n}$
 
@@ -438,12 +438,24 @@ Quotientenkriterium: $R=\displaystyle{\lim_{k \to \infty}}  \Bigl|\frac{a_k}{a_{
 
 Wurzelkriterium: $R=\bigg( \displaystyle{\lim_{k \to \infty}} \sqrt[k]{|{a_k}|} \bigg)^{-1}$
 
-TODO: RECHNEN MIT POTENZREIHEN
-
 TODO: PYTHON -> vllt machbar indem man iwie ak und ak+1 bekommt und dann ausrechnet
 
 ## Binomialreihen
-TODO:
+Mit der Binomialreihe kann, gleich wie mit der Taylor-Reihe, eine Potenzreihe aufgestellt werden. Mit dieser kann dann eine Approximation einer Funktion abgebildet werden. 
+
+>Wichtig: Die Binomialreihe funktioniern nur bei Funktionen, welche aus äusserte Funktion eine Potzen haben. ($\sqrt{}$, $\frac{1}{x}$, $x^m$)
+
+Der Binomische Lehrsatz sieht folgende Formel für den Aufbau der Reihe vor:
+$$(1+x)^\alpha=\sum\limits_{k=0}^\alpha\bigg(\substack{\alpha \\ \\ k} \bigg)x^k$$
+
+wobei $\bigg(\substack{\alpha \\ \\ k} \bigg) = \frac{\alpha!}{k!(\alpha-k)!}$ die **Binomialkoeffizienten** sind.\
+Der Reihenaufbau sieht dann wie folgt aus:
+
+$(1+x)^\alpha=\sum\limits_{k=0}^\alpha\bigg(\substack{\alpha \\ \\ k} \bigg)x^k$ mit $\bigg(\substack{\alpha \\ \\ k} \bigg) = \frac{\alpha*(\alpha-1)*...*(\alpha-k+1)}{k * (k-1)*...*3*2*1}$
+
+**Beispiel**
+
+$f(x)=\sqrt{1+x} = (1+x)^{1/2}=\sum\limits_{k=0}^\infty\bigg(\substack{1/2 \\ \\ k} \bigg)x^k=\bigg(\substack{1/2 \\ \\ 0} \bigg)x^0+\bigg(\substack{1/2 \\ \\ 1} \bigg)x^1+\bigg(\substack{1/2 \\ \\ 2} \bigg)x^2+\bigg(\substack{1/2 \\ \\ 3} \bigg)x^3+...$
 
 ## Taylor
 ### Taylor-Polynom
@@ -496,6 +508,35 @@ $R=\displaystyle{\lim_{k \to \infty}} \Bigl|\frac{a_k}{a_{k+1}}\Bigr| = \display
 
 ## Restgleid nach Lagrange
 TODO:
+
+## Rechnen mit Potenzreihen
+TODO:
+### Differenzieren
+Genauso wie Funktionen können auch Potenzriehen abgeleitet werden. Dafür muss Gliedweise differenziert werden. Gleiches gilt auch für die definierende Summe der Reihe. Jedoch Kann die Summe auch einfach erneut abgelesen werden, nachdem man die Potenzreihe abgeleitet hat.
+
+**Beispiel**
+
+Beispiel anhand von $sin(x)$ zu $cos(x)$ ableiten:\
+![Potenzreihe_Ableiten](./pic/fig_5.0.0.png_TODO "fig 5.0.0")
+
+### Integrieren
+Genauso wie Funktionen können auch Potenzriehen integriert werden. Dafür muss Gliedweise integriert werden. Gleiches gilt auch für die definierende Summe der Reihe. Jedoch Kann die Summe auch einfach erneut abgelesen werden, nachdem man die Potenzreihe integriert hat.
+
+**Beispiele**
+
+Beispiel anhand von $sin(x)$ zu $cos(x)$ integriern:\
+![Potenzreihe_Integrieren](./pic/fig_5.1.0.png_TODO "fig 5.1.0")
+
+![Potenzreihe_Integrieren](./pic/fig_5.2.0.png_TODO "fig 5.2.0")
+
+### Substitution
+Kompliziertere Ausdrücke können mittels Substitution ersetzt werden.
+
+Ausgehen von der Binomialreihe $\frac{1}{1-z}=1+z+z^2+z^3+z^4 = (1-z)^{-1}\sum\limits_{k=0}^\infty\bigg(\substack{-1 \\ \\ k} \bigg)(-z^k)$
+
+Wir wollen erreichen, dass $\frac{1}{1-z}$ genutzt werden kann, um folgendes Beispiel auszurechnen: $\frac{1}{1+2x^2}$\
+Dafür müssen wir $-2x^2$ (da - + - = +) mit $z$ ersetzen. Nun kann die Funktion gemäss der obenstehenden Summe ausgerechnet werden. (also eigentlich gemäss $\bigg(\substack{-1 \\ \\ k} \bigg) = \frac{(-1)(-2)(-3)...(-1-(k-1))}{1*2*3*...*k}$ )\
+$\frac{1}{1+2x^2}=1-2x^2+4x^4-8x^6+16x^8-.+...$
 
 ## Mehrdimensionale Differentialrechnung
 TODO:
