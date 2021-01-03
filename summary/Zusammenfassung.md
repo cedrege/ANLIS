@@ -507,10 +507,16 @@ $R=\displaystyle{\lim_{k \to \infty}} \Bigl|\frac{a_k}{a_{k+1}}\Bigr| = \display
 >Sidenote: $\frac{(-1)^k}{(-1)^{k+1}} = -1^1$, und davon wurde oben der Betrag genommen. Somit ist es weggefallen.
 
 ## Restgleid nach Lagrange
-TODO:
+Das Restglied nach Lagrange ist gleich dem Fehler den wir machen, wenn wir die Funktion $f$ durch das $n$. Taylor-Polynom ersetzen.
+
+Falls die Funktion mindestens $n+1$ mal differenzierbar ist, gilt:
+$$f(x) = \sum\limits_{k=0}^n\frac{f^{(k)}(x_0)}{k!}(x-x_0)^k + R_n(x)$$
+Die Funktion muss eben einmal mehr differenzierbar sein, sonst gäbe es ja keinen Rest und $f(x) = R_n(x)$
+
+Das Restglied ergibt sich druch:
+$$R_n(x) = \frac{f^{(n+1)}(c)}{(n+1)!}(x-x_0)^{n+1}$$
 
 ## Rechnen mit Potenzreihen
-TODO:
 ### Differenzieren
 Genauso wie Funktionen können auch Potenzriehen abgeleitet werden. Dafür muss Gliedweise differenziert werden. Gleiches gilt auch für die definierende Summe der Reihe. Jedoch Kann die Summe auch einfach erneut abgelesen werden, nachdem man die Potenzreihe abgeleitet hat.
 
@@ -554,7 +560,7 @@ $A=\pi*r^2$
 #### 1. Surface
 $A=4\pi*r^2$
 #### 2. Volume
-$V=\frac{4}{3}\pi*r^3$
+$V=\frac{4}{3}\pi*r^3=\frac{1}{6}\pi d^3$
 ### Kegel Formeln
 #### 1. Mantelline
 $s=\sqrt{h^2+r^2}$
