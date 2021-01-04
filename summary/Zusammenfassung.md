@@ -105,8 +105,8 @@ Eine weitaus umfangreichere Liste kann auf https://en.wikipedia.org/wiki/Lists_o
 Zudem ist folgender Integralrechner empfehlenswert: https://www.integral-calculator.com \
 ![Integrationstabelle](./pic/fig_4.4.0.png_TODO "fig 4.4.0")
 
-### Integral als Summe (Reimannsche Summe)
-Die Fläche eines Integrals kann mittels der Reimannschen Summe gebildet werden. Dafür wird die Fläche in $n$ Intervalle aufgeteilt und zwischen der Untergrenze $a$ und der Obergrenze $b$ zusammengezählt.\
+### Integral als Summe (Riemannsche Summe)
+Die Fläche eines Integrals kann mittels der Riemannschen Summe gebildet werden. Dafür wird die Fläche in $n$ Intervalle aufgeteilt und zwischen der Untergrenze $a$ und der Obergrenze $b$ zusammengezählt.\
 **Untersumme**\
 Die Untersumme ist die Summer aller Rechtecke, welche den zu integrierenden Bogen nicht überschreiten (Die linke, obere Seite berührt den Bogen).\
 ![Untersumme](./pic/fig_4.6.0.png_TODO "fig 4.6.0")
@@ -136,18 +136,18 @@ $$
 
 **Python**
 ```python
-# Numerical calculations based on the Reimann-Integral 
+# Numerical calculations based on the Riemann-Integral 
 import numpy as np
 
 #Define function -> here x^2
 def f(x):
     return x*x
-# Reimannsche untersumme
+# Riemannsche untersumme
 # func = funcpointer
 # a = lower border
 # b = upper border
 # n = amount of intevalls
-def reimann_us(func, a, b, n):
+def Riemann_us(func, a, b, n):
     sum = 0
     dx = (b-a) / n
     for i in range(1, n+1):
@@ -155,12 +155,12 @@ def reimann_us(func, a, b, n):
         sum += func(xk) * dx
     return sum
     
-# Reimannsche untersumme
+# Riemannsche untersumme
 # func = funcpointer
 # a = lower border
 # b = upper border
 # n = amount of intevalls
-def reimann_os(func, a, b, n):
+def Riemann_os(func, a, b, n):
     sum = 0
     dx = (b-a) / n
     for i in range(1, n+1):
@@ -173,13 +173,13 @@ def reimann_os(func, a, b, n):
 # a = 1
 # b = 2
 # n = 5
-# print(f"N-Value: {n} Reimann-Untersumme: {reimann_us(f,a,b,n):0.5f} Reimann-Obersumme: {reimann_os(f,a,b,n):0.5f}")
+# print(f"N-Value: {n} Riemann-Untersumme: {Riemann_us(f,a,b,n):0.5f} Riemann-Obersumme: {Riemann_os(f,a,b,n):0.5f}")
 
 ## Multiple Steps based on 2^(1 to 10)
 # m = 10
 # for k in range(1, m+1):
 #    n = np.power(2, k)
-#    print(f"N-Value: {n} Reimann-Untersumme: {reimann_us(f,a,b,n):0.5f} Reimann-Obersumme: {reimann_os(f,a,b,n):0.5f}")
+#    print(f"N-Value: {n} Riemann-Untersumme: {Riemann_us(f,a,b,n):0.5f} Riemann-Obersumme: {Riemann_os(f,a,b,n):0.5f}")
 ```
 
 ```python
@@ -558,15 +558,95 @@ Dafür müssen wir $-2x^2$ (da - + - = +) mit $z$ ersetzen. Nun kann die Funktio
 $\frac{1}{1+2x^2}=1-2x^2+4x^4-8x^6+16x^8-.+...$
 
 ## Mehrdimensionale Differentialrechnung
-
 ### Konturlinien
-Wolfram alpha nutzen ;)
+TODO: Wolfram alpha nutzen ;)
 
 ### Partielle Ableitung
+Die `partielle Ableitung` wird eingesetzt, wenn es in einer Funktion mehrere unterschiedliche Variablen gibt. die Schriebweise der partiellen Ableitung wird anstatt mit dem $\frac{dx}{dy}$ mit dem Partial Zeichen $\partial$ bewerkstelltigt. Die Funktion muss so oft abgleitet werden, wie sie unterschiedliche Variabeln hat. Bei jeder dieser Ableitungen wird nach einer Variabel abgeleitet. Die anderen werden als Konstanten betrachtet.
+
+Für eine Funktion $f(x,y)$ würde folgendes geschrieben werden.:\
+Dies ist die Parielle Ableitung von $f(x,y)$ nach $\partial x$
+$$f_x(x,y_0)=\frac{\partial f(x,y)}{\partial x}\biggl|_{x,y=y_0}$$
+Dies ist die Parielle Ableitung von $f(x,y)$ nach $\partial y$
+$$
+f_x(x_0,y)=\frac{\partial f(x,y)}{\partial y}\biggl|_{x=x_0,y}
+$$
+
+Die `partiellen Ableitungen` von $f$ nach $x$ und $y$ an der Stelle $(x_0, y_0)$ sind nach dem oben Gesagten wie folgt definiert:
+
+![Partielle_Ableitung](./pic/fig_6.0.0.png_TODO "fig 6.0.0")
+
+Fasst man $x_0$ und $y_0$ wieder als Variablen auf, erhält man partiellen Ableitungsfunktionen $f_x(x, y)$ und $f_y(x, y)$. Oft verwendet man mit $z = f(x, y)$ alternative Bezeichnungen
+
+$$
+f_x(x,y)=\frac{\partial z}{\partial x}\ \ \ \ \ \ and \ \ \ \ \ \ f_y(x,y)=\frac{\partial z}{\partial y} \\
+f_x(x,y)=\frac{\partial z}{\partial x}\biggl|_{x_0,y_0}\ \ \ \ \ \ and \ \ \ \ \ \ f_y(x,y)=\frac{\partial z}{\partial y}\biggl|_{x_0,y_0}
+$$
+
+> Beachte: Wir verwenden anstatt $f$ oft $z$ weil $z=f(x,y)$
+
+**Beispiel**
+
+Wenn nach einem Gewissen Punkt gesucht wird:\
+Sei $f(x,y) = $\frac{x^2}{y+1}$. Gesucht ist $\frac{\partial z}{\partial x}$ (oder andere Schreibweise) $f_x(x,y)$ am Punkt (3,2).\
+Da, wenn nach $x$ abgeleitet, alle anderen Variabeln als Konstanten betrachtet werden, würde die Ableitung wie folgt aussehen:\
+1. Konstante(n) einsetzen $z = f(x, 2) = \frac{x^2}{y+1} \frac{x^2}{2+1} \frac{x^2}{3}$
+2. Nach $x$ ableiten $\frac{d}{dx} \bigg(\frac{x^2}{3}\bigg) = \frac{2x}{3}$
+3. Nun kann für $x$ noch 3 eingesetzt werden $\frac{2*3}{3} = 2$
+
+> Beachte: Die partielle Ableitung einer Funktion nach einer Variablen bestimmen heisst nichts anderes als gewöhnlich nach dieser Variablen ableiten und dabei alle anderen Variablen als Konstanten betrachten.
+
+Es ist aber so, dass Beispiele an einem Punkt nur sehr selten vorkommen!
+
+Nun zu Beispielen, die nicht an einem bestimmten Punkt abgeleitet werden. (Man beachte auch die entsprechenden Schriebweisen wenn $f(x,y)$ oder $z=$ steht)
+
+1. $f(x,y) = y^2e^{3x}$
+   1. $\frac{\partial f}{\partial x}= f_x = y^2\cdot e^{3x} \cdot3$
+   2. $\frac{\partial f}{\partial y}= f_y = 2y\cdot e^{3x}$
+2. $z=(3xy+2x)^5$
+   1. $\frac{\partial z}{\partial x}= z_x = 5(3xy+2x)^4 \cdot (3y + 2)$
+   2. $\frac{\partial z}{\partial y}= z_y = 5(3xy+2x)^4 \cdot (3x) = 15x(3xy+2x)^4$
+3. $g(x,y)=e^{x+3y}sin(xy)$
+   1. $\frac{\partial g}{\partial x}= g_x = e^{x+3y} \cdot 1 \cdot sin(xy) + e^{x+3y} \cdot cos(xy) \cdot y$
+   2. $\frac{\partial g}{\partial y}= g_y = e^{x+3y} \cdot 3 \cdot sin(xy) + e^{x+3y} \cdot cos(xy) \cdot x$
+
+Bei dem Beispiel 3 wurde die Kettenregel für einzelne Elemente der Ableitung nach $x$ oder $y$ angewant. Diese hat aber nicht mit der Partiellen Kettenregel zu tun, welche später noch behandelt wird.
+
+Nochmals Kurz als repetition
++ Mit + oder - unterteilte Ausdrücke fallen weg, wenn sich in ihnen die abzuleitende Variabel nicht befindet.
++ In * oder / Ausdrücken, in den nur ein Teil des Ausdrucks von der Variabel abhängt, muss die Produkt / Quotiontenregel **NICHT** angewandt werden. Dort wird nur die entsprechende Variabel abgeleitet und der andere Teil ganz normal daran multipliziert.
++ In * oder / Ausdrücken, in den beide Teile des Ausdrucks von der Variabel abhängt, muss die Produkt / Quotiontenregel
 
 ### Gradient
+Der Gradient ist eigentlich nichts anderes als ein Vector, der die einzelnen partiellen Ableitungen für entsprechende Variabeln ($[x,y,z,...]^T$) beinhaltet. Der Gradient wird mittels einem auf den Kopf gestellten Delta Zeichen $\nabla$ vor der Funktion Dargestellt.
+$$\nabla f(x,y)=\begin{bmatrix} f_x(x,y) \\ f_y(x,y) \end{bmatrix}$$
+
+>In Richtung des Gradienten nimmt die **Funktion maximal zu**, in entgegengesetzter Richtung nimmt die **Funktion maximal ab**: darauf basiert das Gradientenabstiegsverfahren
+
+Weiter Eigenschaften eines Gradienten:\
+Ist $f$ eine anständige Funktion, d.h. insbesondere im Punkt $(x_0, y_0)$ differenzierbar mit dem Gradienten $\nabla f(x_0, y_0) \neq 0$, dann ist
++ die Richtung des Gradienten $\nabla f(x_0, y_0) \neq 0$
+  + **Senkrecht (orthogonal)** zu den Konturlinien von $f$ durch $(x_0, y_0)$, d.h. den Kurven mit $f(x_0, y_0) = f(x, y)$.
+  + in **Richtung der maximalen Zunahme** von $f$.
++ der Betrage des Gradienten $\vert \nabla f(x_0, y_0) \vert$
+  + ist gleich der **maximalen Änderungsrate** von $f$ in diesem Punkt.
+  + ist gross, wenn die Konturlinien nahe beieinander sind und klein, wenn sie weit auseinander liegen.
+
+Da die Partielle Ableitung eine Überschrift darüber behandelt wurde verweise ich darauf und werde für den Gradienten nur ein Beispiel machen. _Es handelt sich schliesslich nur ums Einsetzen der Partiellen Ableitung in einen Vector_.
+
+**Beispiel**
+
+Gesucht ist der Gradient von $f(x, y) = x + e^y$\
+$\nabla f(x,y) = \begin{bmatrix} f_x(x,y) \\ f_y(x,y) \end{bmatrix} = \begin{bmatrix} 1 \\ e^y \end{bmatrix}$
 
 #### Gradient an einem Punkt
+Der Gradient kann auch an einem bestimmten Punkt errechnet werden. Dann muss dieser Punkt gegeben sein und auch in die entsprechende Dimension des Gradienten passen.
+
+**Beispiel von oben** (Funktion: $f(x, y) = x + e^y$, Punkt $\color{orange}(5, 1)$)
+
+$\nabla f(x,y) = \begin{bmatrix} f_x(x,y) \\ f_y(x,y) \end{bmatrix} = \begin{bmatrix} 1 \\ e^y \end{bmatrix} = \color{orange}\begin{bmatrix} 1\cdot5 \\ e^1 \end{bmatrix} = \begin{bmatrix} 5 \\ e \end{bmatrix}$
+
+Wenn eine Ableitung nach z.B. $x$ am Ende noch andere Variabeln beinhaltet, so müssen die entsprechenden Werte dieser halt ebenfalls eingefüllt werden.
 
 ### Richtungsableitung
 Wenn in der Aufgabe stehen würde, dass man den Gradienten nicht dafür nutzen darf steht alles auf den Slides SW13 ab Slide 27! Es macht jedoch keinen Sinn alles aufzuführen, da es mit dem Gradienten 100 mal einfacher ist! Nun zu Thema:
@@ -578,7 +658,25 @@ Als Info: Um aus $\vec{a}$ einen Einheitsvector zu machen muss er selbst duch se
 Die Richtungsableitung kann folgendermassen berechnet werden:
 $$D_ef(x_0)=\nabla f(x_0) \bullet e$$
 Diese Gleichung sagt aus, dass man dien Gradienten einer Funktion nehmen soll und diesen mit dem nomierten Richtungsvektor Scalar multiplizieren soll.\
-Das Resultat sagt dann aus, wie ein Unit Step in die Richtung des nomierten Richtungsvektor den Wert der Funktion ändern wird. 
+Das Resultat sagt dann aus, wie ein Unit Step in die Richtung des nomierten Richtungsvektor den Wert der Funktion ändern wird.
+
+Übrigens, die Partielle Ableitung nach $x$ ist auch gleich der Richtungsableitung in Richtung $x$. Gleiches gilt auch für $y$ oder sonstige Variabeln. Mit der Richtungsableitung selbst aber, ist es einem möglich, in eine beliebige Richtung zu gehen.
+
+**Beispiel**
+
+Sei $f(x,y,z) = 2x^2 + 3y^3 + z^2$, $x_0 =[2,1,3]^T$, $a = [1,0,-2]^T$ (Beachten, dies ist kein Einheitsvector)
+
+Zuerst erstellt man den Gradienten:\
+$\nabla f(x,y,z) = \begin{bmatrix} 4x \\ 9y \\ 2z\end{bmatrix}$
+
+Dieser wird dann an den Punkt $x_0$ gesetzt:\
+$\begin{bmatrix} 4x \\ 9y \\ 2z\end{bmatrix}$ an dem Punkt $x_0 \rArr \begin{bmatrix} 8 \\ 9 \\ 6\end{bmatrix}$
+
+Dann muss aus $a$ einen Einheitsvektor gemacht werden.
+$\frac{a}{\vert a \vert} = \frac{a}{\sqrt{5}} = \frac{1}{\sqrt{5}} \cdot a = [\frac{1}{\sqrt{5}}, 0, -\frac{2}{\sqrt{5}}]^T$
+
+Am Schluss kann das Skalarprodukt $\nabla f(x,y,z)\bullet a$ gebildet werden:\
+$\nabla f(x,y,z)\bullet a = \begin{bmatrix} 8 \\ 9 \\ 6 \end{bmatrix} \bullet \begin{bmatrix} \frac{1}{\sqrt{5}} \\ 0 \\ -\frac{2}{\sqrt{5}} \end{bmatrix} =\frac{8}{\sqrt{5}} + (-\frac{12}{\sqrt{5}}) = -\frac{4}{\sqrt{5}}$
 
 ## Parameterdarstellung
 TODO: 
