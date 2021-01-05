@@ -98,22 +98,22 @@ TODO: https://www.youtube.com/watch?v=gaa9qiREPaE
 ## Integralrechnung
 Im allgemeinen ist die Integralrechnung die Umkehrung der Differentialrechnung.\
 Mittels Integralen kann zum einen eine Fläche eines beliebigen Objektes berechnet werden und zum anderen die Bogenlänge. (ähnlich zum Umfang des Objektes)\
-![Integralrechnung](./pic/fig_4.5.0.png_TODO "fig 4.5.0")
+![Integralrechnung](./pic/fig_4.5.0.png "fig 4.5.0")
 
 ### Integrationstabelle
 Eine weitaus umfangreichere Liste kann auf https://en.wikipedia.org/wiki/Lists_of_integrals gefunden werden.\
 Zudem ist folgender Integralrechner empfehlenswert: https://www.integral-calculator.com \
-![Integrationstabelle](./pic/fig_4.4.0.png_TODO "fig 4.4.0")
+![Integrationstabelle](./pic/fig_4.4.0.png "fig 4.4.0")
 
 ### Integral als Summe (Riemannsche Summe)
 Die Fläche eines Integrals kann mittels der Riemannschen Summe gebildet werden. Dafür wird die Fläche in $n$ Intervalle aufgeteilt und zwischen der Untergrenze $a$ und der Obergrenze $b$ zusammengezählt.\
 **Untersumme**\
 Die Untersumme ist die Summer aller Rechtecke, welche den zu integrierenden Bogen nicht überschreiten (Die linke, obere Seite berührt den Bogen).\
-![Untersumme](./pic/fig_4.6.0.png_TODO "fig 4.6.0")
+![Untersumme](./pic/fig_4.6.0.png "fig 4.6.0")
 
 **Obersumme**\
 Die Obersumme ist die Summer aller Rechtecke, welche den zu integrierenden Bogen überschreiten (Die rechte, obere Seite berührt den Bogen).\
-![Obersumme](./pic/fig_4.7.0.png_TODO "fig 4.7.0")
+![Obersumme](./pic/fig_4.7.0.png "fig 4.7.0")
 
 Beispiel:\
 In diesem Beispiel wird aufgezeigt, wie das Integral $\int\limits_{0}^{1}x^2$ als Summe dargestellt werden kann.\
@@ -202,8 +202,8 @@ Parabelschar = Verallgemeinerung der möglichen Stammfunktionen: $y=x^2+C\ \ \ \
 Da beim integrieren nicht gesagt werden kann welche oder überhaupt konstante Zahlen bei der `Stammfunktion` $F(x)$ dabei war gibt es mehrere Möglichkeiten, wie die Funktion ausgesehen haben könnte.
 
 Bsp: $f(x)_0=x^2+2$ ist eine `Stammfunktion` von $2x$\
-Weitere Funktionen im Bild fig_4.1.0.svg_TODO dargtestellt:\
-![Stammfunktionen_beispiel](./pic/fig_4.1.0.svg_TODO "fig 4.1.0")
+Weitere Funktionen im Bild fig_4.1.0.svg dargtestellt:\
+![Stammfunktionen_beispiel](./pic/fig_4.1.0.svg "fig 4.1.0")
 
 Man sieht also, dass die Umkehrung einer `Differenzierung` mehrere Lösung haben kann. Darum ist das `Unbestimmte Integral` von $F(x)$ die Menge ALLER Stammfunktionen (`Parabelschar`) von $f(x)$.
 
@@ -276,7 +276,7 @@ Angenommen von einem Integral mit den Grenzen $1,2$ wurde $x^2$ substituiert,\
 $\int\limits_{1}^2f(x) \rightarrow \int\limits_{1}^4f(u)$\
 so müssen die Grenzen $1,2$ jeweils $1^2$ respektive $2^2$ gerechnet werden. Somit erhällt das Integral neu die Grenzen $1,4$.
 
-<img src="./pic/fig_4.3.0.png_TODO" alt="fig 4.3.0" width="600"/>
+<img src="./pic/fig_4.3.0.png" alt="fig 4.3.0" width="600"/>
 
 #### Zweite Substitutionsregel bei bestimmten Integralen
 Theorem: Es gilt: $\int\limits_{a}^bf(x)dx=\int\limits_{\phi^{-1}(a)}^{\phi^{-1}(b)}f(\phi(u))\phi'(u)du$
@@ -291,8 +291,8 @@ Das Integrieren funktioniert gleich wie bei der zweiten Substitutionsregel für 
 
 ### Bemerkungen zur Integralsubstitution
 
-<img src="./pic/fig_4.8.1.png_TODO" alt="fig 4.8.1" width="600"/>
-<img src="./pic/fig_4.8.2.png_TODO" alt="fig 4.8.2" width="600"/>
+<img src="./pic/fig_4.8.1.png" alt="fig 4.8.1" width="600"/>
+<img src="./pic/fig_4.8.2.png" alt="fig 4.8.2" width="600"/>
 
 ### Rechenregel für Integrale
 **Umkehrung**\
@@ -310,7 +310,7 @@ $\int\limits_{a}^b(f(x)\plusmn g(x))dx=\int\limits_{a}^bf(x)dx \plusmn \int\limi
 **Zerlegung des Integrationsintervalls**\
 Ist $f$ über einem geschlossenen Intervall, welches die Punkte $a, b, c$ enthält integrierbar, dann gilt:\
 $\int\limits_{a}^bf(x)dx=\int\limits_{a}^cf(x)dx+\int\limits_{c}^bf(x)dx$\
-![Stammfunktionen_beispiel](./pic/fig_4.2.0.svg_TODO "fig 4.2.0")
+![Stammfunktionen_beispiel](./pic/fig_4.2.0.svg "fig 4.2.0")
 
 ### Partielle Integration
 _Partielle Integration_ kann bei `bestimmten` wie auch bei `unbestimmten Integralen` gleich angewandt werden. **Einzig muss bei `bestimmten Integralen` an die Grenzen gedacht werden**. Diese müssen jedoch nicht umgeschrieben werden während dem partiellen Integrieren. Ziel ist es, dass das Integral auf der rechten (RHS) Seite eingacher wird.
@@ -536,7 +536,7 @@ Genauso wie Funktionen können auch Potenzriehen abgeleitet werden. Dafür muss 
 **Beispiel**
 
 Beispiel anhand von $sin(x)$ zu $cos(x)$ ableiten:\
-![Potenzreihe_Ableiten](./pic/fig_5.0.0.png_TODO "fig 5.0.0")
+![Potenzreihe_Ableiten](./pic/fig_5.0.0.png "fig 5.0.0")
 
 ### Integrieren
 Genauso wie Funktionen können auch Potenzriehen integriert werden. Dafür muss Gliedweise integriert werden. Gleiches gilt auch für die definierende Summe der Reihe. Jedoch Kann die Summe auch einfach erneut abgelesen werden, nachdem man die Potenzreihe integriert hat.
@@ -544,9 +544,9 @@ Genauso wie Funktionen können auch Potenzriehen integriert werden. Dafür muss 
 **Beispiele**
 
 Beispiel anhand von $sin(x)$ zu $cos(x)$ integriern:\
-![Potenzreihe_Integrieren](./pic/fig_5.1.0.png_TODO "fig 5.1.0")
+![Potenzreihe_Integrieren](./pic/fig_5.1.0.png "fig 5.1.0")
 
-![Potenzreihe_Integrieren](./pic/fig_5.2.0.png_TODO "fig 5.2.0")
+![Potenzreihe_Integrieren](./pic/fig_5.2.0.png "fig 5.2.0")
 
 ### Substitution
 Kompliziertere Ausdrücke können mittels Substitution ersetzt werden.
@@ -574,7 +574,7 @@ $$
 
 Die `partiellen Ableitungen` von $f$ nach $x$ und $y$ an der Stelle $(x_0, y_0)$ sind nach dem oben Gesagten wie folgt definiert:
 
-![Partielle_Ableitung](./pic/fig_6.0.0.png_TODO "fig 6.0.0")
+![Partielle_Ableitung](./pic/fig_6.0.0.png "fig 6.0.0")
 
 Fasst man $x_0$ und $y_0$ wieder als Variablen auf, erhält man partiellen Ableitungsfunktionen $f_x(x, y)$ und $f_y(x, y)$. Oft verwendet man mit $z = f(x, y)$ alternative Bezeichnungen
 
@@ -677,6 +677,82 @@ $\frac{a}{\vert a \vert} = \frac{a}{\sqrt{5}} = \frac{1}{\sqrt{5}} \cdot a = [\f
 
 Am Schluss kann das Skalarprodukt $\nabla f(x,y,z)\bullet a$ gebildet werden:\
 $\nabla f(x,y,z)\bullet a = \begin{bmatrix} 8 \\ 9 \\ 6 \end{bmatrix} \bullet \begin{bmatrix} \frac{1}{\sqrt{5}} \\ 0 \\ -\frac{2}{\sqrt{5}} \end{bmatrix} =\frac{8}{\sqrt{5}} + (-\frac{12}{\sqrt{5}}) = -\frac{4}{\sqrt{5}}$
+
+## Totales Differential
+Das Totale Differential ist die Ableitung einer Funktion nach $x,y$ an einem Punkt(a,b).\
+$df=d_x(a,b)dx+f_y(a,b)dy$ oder in Kurzform $df=d_xdx+f_ydy$
+
+Es ist wichtig, dass hier $dx, dy$ auch mitgeschrieben werden, da diese Variabeln den Fehler darstellen
+
+TODO Example??
+
+## Kettenregel multidimensionaler Differenzialrechnung
+
+## Linearisierung von Funktionen mehrerer Variabeln
+
+## Kritische Punkte multidimensionaler Differenzialrechnung
+Wenn der Gradient 0 ist, hat man einen kritischen Punkt. Es dürfen aber nicht die einzelnen Werte des Gradienten mitenander verrechnet werden, um schlussendlich 0 zu erhalten. Es geht wirklich nur darum, dass alle Variabeln an einem gewissen Punkt 0 sind.
+
+Wenn es einen undefinierten Punkt gibt, ist dieser auch ein kritischer Punkt, jedoch sind bei diese weitere Untersuchungen notwendig. z.B. $\frac{1}{\sqrt{x^2 + y^2}}$ ist bei $x$ und $y$ = 0 undefiniert.
+
+> Theorem: Falls eine anständige Funktion f in $x_0$ ein (lokales) Maximum oder Minimum hat, dann verschwindet dort der Gradient, d.h. $\nabla f(x_0) = 0$, d.h. $x_0$ ist ein kritische Punkt. achtung: die Umkehrung gilt nicht!
+
+Um was es sich bei diesem Punkt handelt wird im Kapitel **Klassifikation der kritischen Punkte** besprochen.
+
+**Beispiel 1**\
+Based on: $f(x,y) ) \frac{1}{4}(x^4-2x^2+y^4-2y^2)$
+
+Der Gradient von $f$ ist $\nabla f(x,y) = \begin{bmatrix} \partial f / \partial x \\ \partial f /\partial y \end{bmatrix} = \begin{bmatrix} x^3 - x \\ y^3 -y \end{bmatrix}$. Kritische Punkte sind Lösungen des folgenden Systems nichtlinearer Gleichungen:
+
+$\nabla f(x,y) = 0 \lrArr x^3 -x = 0$ und $y^3 -y = 0$\
+Daraus ergibt sich, dass $x$ und $y$ eines der folgenden Kombinationen sein kann: $(0,0), (\plusmn1,\plusmn1), (\plusmn1, 0), (0, \plusmn1)$.
+
+$\rArr$ Somit sind die folgenden Punkte kritische Punkte: $(0,0), (\plusmn1,\plusmn1), (\plusmn1, 0), (0, \plusmn1)$
+
+**Beispiel 2**\
+Based on: $f(x,y) = x^2-y^2$
+
+Somit ist der Gradient $\nabla f(x,y) = \begin{bmatrix} 2x \\ -2y \end{bmatrix}$. Wir fragen uns nun, an welchem Punkt der Gradient null ist und stellen fest, dass dieser nur am Punkt $(0,0) = 0$ sein kann. 
+
+$\rArr$ Somit ist der folgenden Punkt ein kritischer Punkt: $(0,0)$
+
+## Partielle Ableitung höherer Ordnung
+Die partiellen Ableitungen einer Funktion sind meist wieder Funktionen und können deshalb wieder abgeleitet werden. Dadurch entstehen die zweiten partiellen Ableitungen oder die partiellen Ableitungen 2. Ordnung. Diesen Prozess kann man natürlich wiederholen.
+
+Es wird also eigentlich zuerst $f$ nach zum Besipiel $x$ abgeleitet und diese Ableitung dann wieder nach $x$ sowie nach $y$. Danach wird die eigentliche Funktion nach $y$ abgeleitet und diese Ableitung dann auch nach $x$ und $y$. So ergeben sich von der initialen Funktion (1), 2, 4, 8, 16, 32,... Ableitungen.
+
+Geschrieben wird es so:
+
+$$
+\frac{\partial}{\partial x}\bigg(\frac{\partial f}{\partial x}\bigg) = \frac{\partial^2z}{\partial x \partial x} = f_{xx} = (f_x)_x
+\ \ \ \ \ \ \ \ \ \ 
+\frac{\partial}{\partial x}\bigg(\frac{\partial f}{\partial y}\bigg) = \frac{\partial^2z}{\partial x \partial y} = f_{yx} = (f_y)_x
+\\
+\frac{\partial}{\partial y}\bigg(\frac{\partial f}{\partial x}\bigg) = \frac{\partial^2z}{\partial y \partial x} = f_{xy} = (f_x)_y
+\ \ \ \ \ \ \ \ \ \ 
+\frac{\partial}{\partial y}\bigg(\frac{\partial f}{\partial y}\bigg) = \frac{\partial^2z}{\partial y \partial y} = f_{yy} = (f_y)_y
+$$
+
+Die **`partiellen Ableitungen` zweiter Ordnung** haben etwas mit der **Krümmung** der Funktion zu tun (wie im Fall einer Variablen).
+
+## Klassifikation der kritischen Punkte
+Die Funktion $f : (x, y) \rightarrow f(x, y)$ habe stetige partielle Ableitungen bis und mit 2. Ordnung und
+$(x_0, y_0)$ sei ein kritischer Punkt von f. Wir definieren
+
+$D=f_{xx}(x_0,y_0)f_{yy}(x_0,y_0) - [f_{xy}(x_0,y_0)]^2$.
+
+Dies ist eigentlich nichts anderes als die Determinate einer 2x2 Matrix zu berechnen. (Natürlich müssen zuerst die Werte des entsprechenden Punkts eingesetzt werden.)\
+Man kann sich diese so vorstellen: $\begin{bmatrix} f_{xx} && f_{xy} \\ f_{xy} && f_{yy} \end{bmatrix}$
+
+Es gilt dann:
+1. Falls $D > 0$ und $f_{xx}(x_0, y_0) > 0$, dann ist $f$ minimal in $(x_0, y_0)$
+2. Falls $D > 0$ und $f_{xx}(x_0, y_0) < 0$, dann ist $f$ maximal in $(x_0, y_0)$
+3. Falls $D < 0$, dann ist $(x_0, y_0)$ ein Sattelpunkt
+4. Falls $D = 0$, dann kann ohne weitere Untersuchungen nichts gesagt werden
+
+## Optimierung
+
+
 
 ## Parameterdarstellung
 TODO: 
