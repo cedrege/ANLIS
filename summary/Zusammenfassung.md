@@ -154,9 +154,9 @@ $x_0: y=f(x_0)=0$\
 **horizontale Asymptote**: \
 Zählergrad > Nennergrad => Asymptote bei $y=0$, Beispiel: $\frac{2*(x^0)}{x}$\
 Zählgrad = Nennergrad => $\frac{4x^2}{2x^2}=\frac{4}{2}=>y=2$
-**schiefe Asymptote**: Zählergrad um 1 grösser als Nennergrad -> Polynomdivision
-Beispiel: 
-![Polynomdivision](./pic/polynomdivision.PNG "Polynomdivision")
+**schiefe Asymptote**: Zählergrad um 1 grösser als Nennergrad -> Polynomdivision\
+Beispiel: \
+![Polynomdivision](./pic/polynomdivision.PNG "Polynomdivision")\
 siehe anderes Beispiel: https://www.gut-erklaert.de/mathematik/polynomdivision.html
 
 ### Zusammengesetzte Funktion
@@ -592,7 +592,10 @@ $\lim\limits_{x\rightarrow a}\frac{f(x)}{g(x)}=\lim\limits_{x\rightarrow a}\frac
 
   * Unbestimmte Ausdrücke der Form $0 *\infty$ bringt man mittels der Identität $f(x)g(x)=\frac{f(x)}{\frac{1}{g(x)}}$ auf einen unbestimmten Ausdruck der Form 0/0.
   * Unbestimmte Ausdrücke der Form $\infty-\infty$ lassen oft durch geeignete algebraische Umformungen auf unbestimmte Ausdrücke der Form 0/0 zurückführen.
-  * Unbestimmte Ausdrücke der Form $0^0$, $\infty ^0$ und $1^{\infty}$ schreiben wir in der Form $y = f(x)g(x)$, logarithmieren beide Seiten und erhalten dann mit $ln y = g(x) · ln(f(x))$ einen der oben besprochenen unbestimmten Ausdrücke.
+  * Unbestimmte Ausdrücke der Form $0^0$, $\infty ^0$ und $1^{\infty}$ schreiben wir in der Form $y = f(x)g(x)$, logarithmieren beide Seiten und erhalten dann mit $ln y = g(x) · ln(f(x))$ einen der oben besprochenen unbestimmten Ausdrücke.\
+
+![Regel de L'Hôpital](./pic/regel_lhopital.PNG "Regel de L'Hôpital")
+
 
 ## Integralrechnung
 Im allgemeinen ist die Integralrechnung die Umkehrung der Differentialrechnung.\
