@@ -78,6 +78,8 @@ c: y-Achsenabschnitt
 ### Exponentialfunktionen
 Eine Funktion der $f(x) = a · b^x$ mit $b > 0$ und $b \ne 1$ heisst Exponentialfunktion. a heisst Anfangswert und b heisst Wachstumsfaktor. Für Definitions- und Wertebereich gilt: \
 $D(f) =\Reals, W(f) = \Reals+.$\
+**exponentielles Wachstum**: $A_t=A_0 *a^t$\
+$A_0$: Ausgangsgrösse im Zeitpunkt $t=0$, $a=1 \pm \frac{p}{100}$, p:prozentuale Zu-/Abnahme
 **Stammfunktion**: $y = a * e^{b*x}$\
 $a^x = b  |  x=\log_a(b)$\
 Exp: sehr schnelles Wachstum\
@@ -208,6 +210,9 @@ Eindeutig beschrieben durch 2 Grössen:
 1. durch ein beliebiges Glied $a_n$ und die Differenz d, oder
 2. durch zwei beliebige Glieder $a_n$ und $a_{n+k}$.
 
+$d=a_{n+1}-a_n$\
+$a_n=a_1+(n-1)d$
+
 ### Summe der Glieder einer Arithmetischen Folge
 $a_1 + a_2 + ... + a_n = \sum\limits_{k=1}^na_k = na_1 + d\frac{n(n-1)}{2}=n\frac{a_1+a_n}{2}$\
 $n$: Anzahl Glieder\
@@ -228,6 +233,9 @@ $q = \frac{a_{n+1}}{a_n}$
 
 **Streng monoton zunehmend**: Jedes Glied ist grösser als das vorherige Glied ($a_{n+1} > a_n$)\
 **beschränkt**: Glieder sind auf einen gewissen Bereich ("Teppich") eingeschränkt, wird auch mit Epsilon $\epsilon$ gekennzeichnet: $|a_n| \leqslant c$
+
+### Spezielle Summen
+![Spezielle Summen](./pic/spezielle_summen.jpg "Spezielle Summen")
 
 ### Grenzwert einer Folge - Rechenregeln
 Falls die Folge ($a_n$) gegen a und die Folge ($b_n$) gegen b konvergiert (annähert)
