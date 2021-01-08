@@ -65,6 +65,16 @@ Vorgehen: Funktionen gleichsetzen und nach x auflösen, anschliessend in eine de
 2. Unendlich viele Lösungen
 3. Keine Lösung\
 
+**BEISPIELE**\
+Punkt(a,b)\
+$y_2-c=m(x-a)$
+
+Wenn es eine Glichung ist, einfach nach $y$ auflösen:\
+$7y+12x-2=0 \rArr y=-\frac{12x}{7}+\frac{2}{7}$
+
+Punkt(2,1), $f(x)y=5x-3$\
+$\frac{-x}{5}x-3 \rArr 1 = -\frac{2}{5}+b \rArr b=1+\frac{2}{5}$
+
 **Schnittpunkt Polynom und Gerade**:\
 Schneidet man ein Polynom mit einer Gerade, dann ist die Anzahl der Schnittpunkte höchstens gleich dem Grad des Polynoms.\
 Vorgehen: Bei der Berechnung setzt man wieder zu Beginn die Funktionswerte gleich. Anschließend bringt man alles auf eine Seite und bestimmt die  Nullstellen  der neuen Funktion, falls nötig mit der Mitternachtsformel  oder duch Polynomdivision.
@@ -508,7 +518,7 @@ Kritische Punkte bei $f'(x)=0$, Kandidaten für lokale Extrema. **Nicht alle Kan
 ### Wende- und Sattelpunkte
 Notwendige und hinreichende Bedingung für einen Wendepunkt der Funktion $y = f(x)$ in $x_0$:\
 $f''(x_0)=0$ und $f'''(x_0) \ne 0$\
-Gilt zudem $f'(x0) = 0$ (horizontale Tangente), dann hat man in $x_0^$ einen Sattelpunkt.
+Gilt zudem $f'(x0) = 0$ (horizontale Tangente), dann hat man in $x_0$ einen Sattelpunkt.
 
 ### Schnittpunkt zweiter Kurven
 $tan\alpha_1=f_1'(x_0)$ und $tan\alpha_2=f_2'(x_0)$\
@@ -847,8 +857,8 @@ import sympy as sp
 sp.init_printing(use_latex='mathjax')
 x = sp.symbols("x")
 
+#TODO: Beide funktionen geben nicht das aus, was gerechnet wird. Dies sollte noch hinzugefügt werden. Jedoch rechnen sie RICHTIG!!! (es handelt siuch lediglich um die erste ausgabe des Integrals)
 # calculate the quadratic average of a given integral within a fixed border
-# TODO: Not yet fully working. need more examples to test it
 def mw_q(func, border):
     normalization = 1 / (border[2] - border[1])
     integral = sp.Integral(sp.Abs(func) ** 2, border)
@@ -886,7 +896,7 @@ TODO:
 Für die normale Bogenlänge kann folgende Formel genutzt werden:\
 $L=\int\limits_{a}^{b}\sqrt{1+[f'(x)]^2}dx = \int\limits_{a}^{b}\sqrt{1+(\frac{dy}{dx})^2}dx$
 
-Für Bogenlege im Poolarkoordinatensystem muss diese Formel genutzt werden:\
+Für Bogenlege im Polarkoordinatensystem muss diese Formel genutzt werden:\
 $L=\int\limits_{\alpha}^{\beta}\sqrt{(r(\phi))^2+(r'(\phi))^2}d\phi$
 
 ```python
@@ -895,6 +905,8 @@ import sympy as sp
 sp.init_printing(use_latex='mathjax')
 x = sp.symbols("x")
 
+# This function only works for the arc length within the normal coordinate system.
+# It is not designed to use with polar coordinates
 def int_arc_length(function, range):
     integral = sp.Integral(sp.sqrt(1 + sp.diff(function) ** 2), range)
     print("Integral")
@@ -912,7 +924,7 @@ def int_arc_length(function, range):
 #int_arc_length(sp.sin(x), (x, 0, sp.pi))
 ```
 
-TODO: PYTHON -> Bogenlänge Poolarkoordinaten
+TODO: PYTHON -> Bogenlänge Polarkoordinaten
 
 ## Summen Indextransformation
 Bei der Indextransformation ist es da Ziel, dass Potenzen nur noch als $x^m$ dastehen. Sieht man in der Summe also eine Potenz, wie z.B. $x^{(m-2)}$, so soll der Summenindex in diesem Fall um 2 reduziert werden. Dafür muss bei jedem vorkommendem $m$, $m+2$ geschrieben werden.
@@ -1183,13 +1195,66 @@ $df=d_x(a,b)dx+f_y(a,b)dy$ oder in Kurzform $df=d_xdx+f_ydy$
 
 Es ist wichtig, dass hier $dx, dy$ auch mitgeschrieben werden, da diese Variabeln den Fehler darstellen
 
-TODO Example??
+**Beispiel**
+
+1. Bestimmen Sie das totale Differential von $g(u, v) = u^2 +uv$
+2. Verwenden Sie das Resultat von (1) und die Änderung von $g$ abzuschätzen, wenn man $(u, v)$ von $(1,2)$ nach $(1.2,2.1)$ ändert..
+
+Das differential ist dann $dg = g_u(u,v)du+g_v(u,v)dv=(2u+v)du+udv$\
+Aus diesem Grund können wir nun sagen, dass $(u,v) = (1,1)$ sind und das $du = 0.2$ und $dv = 0.1$ sind.\
+Mit diesen Angaben können wir nun die Änderung abschätzen. $dg=(2u+v)du+udv=4 \cdot 0.2 + 1 \cdot 0.1 = 0.9$
 
 ## Kettenregel multidimensionaler Differenzialrechnung
 TODO: 
+Graph aufschreiben
+initiale funktion auf schrieben
+dx,dy sachen aufschreiben mit plus in der mitte..
+nach x,y ableiten (mit Kettenregel)
+substitution einsetzen
+
+
 
 ## Linearisierung von Funktionen mehrerer Variabeln
-TODO: 
+Die Linearisierung, $L(x, y)$ von $f$ im Punkt $(a, b)$ ist gegeben durch:
+
+$$f(x)\approx L(x,y)=f(x_0)+\nabla f(x_0) \bullet(x-x_0)$$
+oder, anhand vom Punkt (a,b): 
+$$f(x,y)\approx L(x,y)=f(a,b)+ f_x(a,b)(x-a) \bullet f_y(a,b)(y-b)$$
+
+Somit können wir entweder die Tangente oder die Tangentialebene an der Konturlinie bilden. 
+
+### Tangente an der Konturlinie
+Gegeben die anständige Funktion $z = f(x, y)$ und der Punkt $x_0 = (x_0, y_0).$ Dann ist der Gradient $rf(x_0, y_0)$ senkrecht zur Konturlinie und damit senkrecht zur Tangente an die Konturlinie. Deshalb gilt für jeden Punkt x = (x, y) auf der
+Tangente
+$$\nabla f(x) \bullet (x-x_0) = 0$$
+Die Gleichung der Tangente an die Konturlinie von $f$ im Punkt $x_0 = (x_0, y_0)$ ist also: $f_x(x_0,y_0)(x-x_0)+f_y(x_0,y_0)(y-y_0)=0$
+
+$\nabla f(x_0)= \begin{bmatrix} f_x(x_0,y_0) \\ f_y(x_0,y_0) \end{bmatrix}$
+
+$\vec{x} - \vec{x_0} \begin{bmatrix} x \\ y \end{bmatrix} - \begin{bmatrix} x_0 \\ y_0 \end{bmatrix} = \begin{bmatrix} x - x_0 \\  y - y_0 \end{bmatrix}$
+
+**Beispiel**
+
+$f(x,y) = z = x^2 + y^2$ im Punkt $(x_0,y_0) = (1,1)$\
+Der Gradient ist dann:
+$\nabla f(x,y)= \begin{bmatrix} 2x \\ 2y \end{bmatrix} \rArr$ Punkte einsetzen $\nabla f(x,y)= \begin{bmatrix} 2 \\ 2 \end{bmatrix}$\
+Gemäss Gleichung $\nabla f(x) \bullet (x-x_0) = 0$ haben wir nun: $\begin{bmatrix} 2 \\ 2 \end{bmatrix} = \begin{bmatrix} x - 1 \\  y - 1 \end{bmatrix} =  0$\
+Nun nach $y$ auflösen:\
+$2(x-1)+2(y-1)=0$\
+$2x+2y-4=0$\
+$x+y-2=0 \rArr y=-x+2$
+
+### Tangentialebene an der Konturfläche
+Für die Tangentialebene ist die Gleichung gleich, wie bei der Tangete. Darum wird hier nur ein **Beispiel** aufgezeigt:
+
+Funktion ist: $f(x,y,z) = x^2 + y^2 + z^2$ im Punkt $x_0=[1,1,1]^T$
+
+$\nabla f(x,y,z)= \begin{bmatrix} 2x \\ 2y \\ 2z \end{bmatrix} \rArr$ Punkte einsetzen $\nabla f(x,y,z)= \begin{bmatrix} 2 \\ 2 \\ 2\end{bmatrix}$\
+Gemäss Gleichung $\nabla f(x) \bullet (x-x_0) = 0$ haben wir nun: $\begin{bmatrix} 2 \\ 2 \\2 \end{bmatrix} = \begin{bmatrix} x - 1 \\  y - 1 \\ z-1\end{bmatrix} = 0$\
+Ausrechnen und vereinfachen. Es muss nicht nach $y$ umgestellt werden.\
+$2(x-1)+2(y-1)+2(z-1)=0$\
+$=2x+2y+2z-6=0$\
+$=x+y+z-3=0$
 
 ## Kritische Punkte multidimensionaler Differenzialrechnung
 Wenn der Gradient 0 ist, hat man einen kritischen Punkt. Es dürfen aber nicht die einzelnen Werte des Gradienten mitenander verrechnet werden, um schlussendlich 0 zu erhalten. Es geht wirklich nur darum, dass alle Variabeln an einem gewissen Punkt 0 sind.
@@ -1242,6 +1307,8 @@ $(x_0, y_0)$ sei ein kritischer Punkt von f. Wir definieren
 
 $D=f_{xx}(x_0,y_0)f_{yy}(x_0,y_0) - [f_{xy}(x_0,y_0)]^2$.
 
+> Für den x und y Wert muss das Resultat des Gleichungssystems der initialen Funktion eingesetzt werden. bsp. für $3x^2-3y = 0 ; 3y^2-3x = 0$ kann in Wolfram folgendes eingegeben werden: "solve {3x^2-3y, 3y^2-3x} = 0" 
+
 Dies ist eigentlich nichts anderes als die Determinate einer 2x2 Matrix zu berechnen. (Natürlich müssen zuerst die Werte des entsprechenden Punkts eingesetzt werden.)\
 Man kann sich diese so vorstellen: $\begin{bmatrix} f_{xx} && f_{xy} \\ f_{xy} && f_{yy} \end{bmatrix}$
 
@@ -1255,8 +1322,6 @@ Es gilt dann:
 TODO:
 
 
-## Parameterdarstellung
-TODO: 
 ## Allgemeine Formeln der Geometrie
 ### Kreis Formeln
 #### 1. Circumference
@@ -1300,3 +1365,30 @@ Wird genutzt, wenn $x<1$.
 ### arcoth
 $arctanh = \frac{1}{\sqrt{1-x^2}}$\
 Wird genutzt, wenn $x>1$.
+
+
+
+
+
+
+#### Masse
+Formel für Masse ist:\
+$m=\rho V$
+
+Bei einer Kugel wäre das:\
+$m=\rho \cdot V= \rho \frac{4\pi}{3}*R^3=m(R)$
+
+Rel error: = $\frac{m'}{m}$ im Kugelfall: $\frac{\rho 4 \pi R^2dr}{\rho \frac{4\pi}{3}R^3} \rArr$ dann kann man fast alles streichen... 
+
+
+
+
+
+
+Zinseszins:
+
+A = endwert
+
+
+
+$A=P(1+\frac{r}{n})nt$
