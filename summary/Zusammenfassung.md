@@ -260,6 +260,8 @@ Beispiel:\
 ### Folge der n-ten Partialsummen
 Bedeutet n Glieder addieren. Mithilfe der Summe einer endlichen geometrischen Reihe.\
 $a_1+a_{1q}+a_{1q^2}+...+a_{1q^{n-1}}=\sum\limits_{k=0}^{n-1}a_1q^k=a_1\frac{q^n-1}{q-1}$\
+Für den Grenzwert dieser Folge findet man: \
+$s=\lim\limits_{n \rightarrow \infty}s_n=\lim\limits_{n \rightarrow \infty} a_1\frac{1-q^n}{1-q}=\frac{a_1}{1-q}\lim\limits_{n\rightarrow \infty}(1-q^n)$\
 $a_1$: 1. Glied, $n$: Anzahl Glieder, $q$: Quotient\
 Bei Anwendung der Formel kann $n\rightarrow \infty$ verwendet werden, so erhält man unendlich viele Glieder.\
 Falls Grenzwert exisitert:\
