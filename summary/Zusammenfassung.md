@@ -101,7 +101,7 @@ Die Logarithmusfunktionen sind nur für $x > 0$, d.h. nur in $\Reals+$ definiert
 
 $log_a 1=0$\
 $log_a a=1$\
-$a^(log_a b)=b$\
+$a^{log_ab}=b$\
 $log_a (a^n )=n$\
 $log_{10} = log$
 
@@ -1318,4 +1318,3 @@ Wird genutzt, wenn $x>1$.
 -> auflisten der einzelnen Winkelfunktionsbeziehungen. Dies kann zb. in dem einten Integral Vid von dem mathe peter gefunden werden...
 
 
--> merge von deveManu in main hat funktioniert
