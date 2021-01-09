@@ -619,10 +619,14 @@ Zudem ist folgender Integralrechner empfehlenswert: https://www.integral-calcula
 Die Fläche eines Integrals kann mittels der Riemannschen Summe gebildet werden. Dafür wird die Fläche in $n$ Intervalle aufgeteilt und zwischen der Untergrenze $a$ und der Obergrenze $b$ zusammengezählt.\
 **Untersumme**\
 Die Untersumme ist die Summer aller Rechtecke, welche den zu integrierenden Bogen nicht überschreiten (Die linke, obere Seite berührt den Bogen).\
+Formel: $\Delta A_k = f(x_{k-1})\Delta x$ \
+\
 ![Untersumme](./pic/fig_4.6.0.png "fig 4.6.0")
 
 **Obersumme**\
 Die Obersumme ist die Summer aller Rechtecke, welche den zu integrierenden Bogen überschreiten (Die rechte, obere Seite berührt den Bogen).\
+Formel: $\Delta A_k = f(x_{k})\Delta x$ \
+\
 ![Obersumme](./pic/fig_4.7.0.png "fig 4.7.0")
 
 Beispiel:\
