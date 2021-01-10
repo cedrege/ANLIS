@@ -19,7 +19,7 @@ $\frac{1}{cos(x)^2}tan(x)=\frac{1}{cos(x)^2}\frac{sin(x)}{cos(x)}=\frac{sin(x)}{
 $\frac{\frac{a}{b}}{\frac{c}{d}}=\frac{a*d}{b*c}$
 
 ### Zahlen
-![Zahlenmenge](./pic/zahlenmenge.png_TODO "Zahlenmenge")
+![Zahlenmenge](./pic/zahlenmenge.png "Zahlenmenge")
 
 
 ## Funktionen
@@ -32,7 +32,7 @@ $f(-x) = f(x), \forall \in D(f)$ (für alle x im Definitionsbereich von f).\
 **Ungerade Funktion**: f ist punktsymmetrisch bezüglich dem Ursprung und es gilt:\
 $f(-x) = -f(x), \forall \in D(f)$
 
-![Funktionen](./pic/funktionen.jpg_TODO "Funktionen")
+![Funktionen](./pic/funktionen.jpg "Funktionen")
 **Beschränktheit**: Eine Funktion heisst beschränkt, wenn sie nach oben, unten oder beides beschränkt ist.\
 **Monotonie**: Eine Funktion heisst streng monoton wachsend/ fallend, wenn sie immer steigt/sinkt. Eine Funktion heisst monoton wachsend, wenn sie nie sinkt.
 
@@ -46,7 +46,7 @@ $\Reals = (-\infty,\infty), \Reals+ = (0,\infty), \Reals- = (-\infty, 0), \Reals
 $I = [a, b] = {x \in \Reals  | a <= x <= b}$ : **abgeschlossenes Intervall**\
 $I = (a, b) = {x \in \Reals | a < x < b}$ : **offenes Intervall**\
 $I = (a, b] = {x \in \Reals | a < x <= b}$ : **halboffenes Intervall**
-![Intervall_Beispiel](./pic/intervall_beispiel.PNG_TODO "Intervall")
+![Intervall_Beispiel](./pic/intervall_beispiel.PNG "Intervall")
 
 ### Lineare Funktionen
 $y = mx + b$
@@ -117,7 +117,7 @@ $log_{10} = log$
 Der Graph der Funktion f heisst konvex, falls er eine Linkskurve durchführt, wenn man von
 links nach rechts geht. Andernfalls heisst der Graph konkav. Eine Gerade ist weder konvex noch
 konkav.
-![Konvex_konkav](./pic/konvex_konkav.PNG_TODO "Konvex/Konkav")
+![Konvex_konkav](./pic/konvex_konkav.PNG "Konvex/Konkav")
 
 ### Potenzfunktionen
 Stammfunktion: $y= a(x-u)^n +b$\
@@ -166,7 +166,7 @@ Zählergrad > Nennergrad => Asymptote bei $y=0$, Beispiel: $\frac{2*(x^0)}{x}$\
 Zählgrad = Nennergrad => $\frac{4x^2}{2x^2}=\frac{4}{2}=>y=2$
 **schiefe Asymptote**: Zählergrad um 1 grösser als Nennergrad -> Polynomdivision
 Beispiel: 
-![Polynomdivision](./pic/polynomdivision.PNG_TODO "Polynomdivision")
+![Polynomdivision](./pic/polynomdivision.PNG "Polynomdivision")
 siehe anderes Beispiel: https://www.gut-erklaert.de/mathematik/polynomdivision.html
 
 ### Zusammengesetzte Funktion
@@ -182,7 +182,7 @@ $u(x)= \sqrt{x}, v(x) =x-1$\
 **Exponent**: $f(x) = 7*3^{x^2-1}$\
 $u(x) = 7*3^x,v(x)=x^2-1$\
 Darstellung im Venndiagram der Funktion $e^{\cos(x^2-1)}$:
-![Venndiagram_beispiel](./pic/venndiagram_beispiel.PNG_TODO "Venndiagram")
+![Venndiagram_beispiel](./pic/venndiagram_beispiel.PNG "Venndiagram")
 
 ### Umkehrfunktionen
 Beachte: $f^{-1}$ steht für die Umkehrfunktion von f, d.h. $f^{-1} \ne \frac{1}{f}$\
@@ -192,12 +192,12 @@ $f^{-1} =x \iff f(x) =y$\
 **surjektiv**: zu jedem y mindestens 1 x-Wert.\
 **bijektiv**: Funktion ist surjektiv und injektiv.\
 Vorgehen: Gleichung nach x auflösen und x mit y vertauschen\
-![injektiv_surjektiv](./pic/injektiv_surjektiv.PNG_TODO "Injektiv/Surjektiv")
+![injektiv_surjektiv](./pic/injektiv_surjektiv.PNG "Injektiv/Surjektiv")
 Beispiele:\
-![Umkehrfunktionen](./pic/umkehrfunktionen.PNG_TODO "Umkehrfunktionen")
+![Umkehrfunktionen](./pic/umkehrfunktionen.PNG "Umkehrfunktionen")
 
 ### Bogenlänge/Radiant, Trigonometrie
-![Trigonometrie](./pic/trigonometrie.PNG_TODO "Trigonometrie")
+![Trigonometrie](./pic/trigonometrie.PNG "Trigonometrie")
 
 ## Folgen, Reihen
 Eine Folge kann wie folgt beschrieben werden:
@@ -246,11 +246,11 @@ Falls die Folge ($a_n$) gegen a und die Folge ($b_n$) gegen b konvergiert (annä
 3. $\lim\limits_{n\rightarrow\infty}(\frac{a_n}{b_n})=\frac{\lim\limits_{n\rightarrow\infty}(a_n)}{\lim\limits_{n\rightarrow\infty}(b_n)}=\frac{a}{b}$ bei $b \ne 0$ und $b_n \ne 0$
 
 #### Trick - Erweitern
-![Grenzwert_erweitern](./pic/grenzwert_erweitern.PNG_TODO "Grenzwert_erweitern")
+![Grenzwert_erweitern](./pic/grenzwert_erweitern.PNG "Grenzwert_erweitern")
 
 #### Trick - Auseinandernehmen
 Beispiel:\
-![Grenzwert_auseinander](./pic/grenzwert_auseinander.PNG_TODO "Grenzwert_auseinander")
+![Grenzwert_auseinander](./pic/grenzwert_auseinander.PNG "Grenzwert_auseinander")
 
 #### Natürliche Grenzwerte
 1. $\lim\limits_{n\rightarrow\infty}(1+\frac{\alpha}{n})^n=e^{\alpha}$, $\forall \alpha \in \R$
@@ -383,7 +383,7 @@ $\lim\limits_{x\rightarrow a}(\frac{f(x)}{g(x)})=\frac{\lim\limits_{x\rightarrow
 #### Stückweise definierte Funktion
 Eine Funktion, die unterschiedlich definiert ist. Ist mit einem Deifnitionsbereich versehen.
 Beispiel:\
-![stückweise_funktion](./pic/stückweise_funktion.PNG_TODO "stückweise_funktion")
+![stückweise_funktion](./pic/stückweise_funktion.PNG "stückweise_funktion")
 Aufzeichnen, falls man es sich nicht vorstellen kann.\
 Falls nötig, Grenzwert ausrechnen. Schauen, in welchen Definitionsbereich der Wert für x fällt.
 
@@ -391,7 +391,7 @@ Falls nötig, Grenzwert ausrechnen. Schauen, in welchen Definitionsbereich der W
 Liegt eine Funktion $f(x)$ zwischen zwei Funktionen $g(x)$ und $h(x)$, und ist der Grenzwert der beiden Funktionen gleich $L$, so ist auch der Grenzwert der Funktion $f(x)$ $L$.\
 $g(x) \leqslant f(x) \leqslant h(x)$ und $\lim\limits_{x\rightarrow c}g(x) = \lim\limits_{x\rightarrow c}h(x)=L$\
 $\lim\limits_{x\rightarrow c}f(x)=L$
-![squeezing_theorem](./pic/squeezing_theorem.PNG_TODO "squeezing_theorem")
+![squeezing_theorem](./pic/squeezing_theorem.PNG "squeezing_theorem")
 
 ### Stetigkeit
 Salopp: eine Funktion f heisst stetig, wenn man deren Graphen zeichnen kann, **ohne den
@@ -444,9 +444,9 @@ Bei Betragsfunktion: $y=f(x)=|x|$\
 Solange beide Ableitungen dasselbe ergeben, ist f(x) differenzierbar.
 
 #### Ableitung elementarer Funktionen
-![Ableitungen_element1](./pic/ableitung_element1.PNG_TODO "Ableitungen_element1")
-![Ableitungen_element2](./pic/ableitung_element2.PNG_TODO "Ableitungen_element2")
-![Ableitungen_element3](./pic/ableitung_element3.PNG_TODO "Ableitungen_element3")
+![Ableitungen_element1](./pic/ableitung_element1.PNG "Ableitungen_element1")
+![Ableitungen_element2](./pic/ableitung_element2.PNG "Ableitungen_element2")
+![Ableitungen_element3](./pic/ableitung_element3.PNG "Ableitungen_element3")
 
 ### Ableitungsregeln
 #### Summenregel
@@ -502,7 +502,7 @@ Das Differential wird verwendet, um die wahre Änderung von $\Delta y$ zu approx
 **Exakte/Wahre Änderung**: $\Delta y=f(x_0 +\Delta x)-f(x_0)$\
 **Differential**: $\Delta f= df =dy =f'(x)dx$\
 Hinweis: Hier ist dx die Differenz der x-Werte $(x - x_0)$
-![Rechenregeln Differentiale](./pic/regeln_differential.PNG_TODO "Rechenregeln Differentiale")
+![Rechenregeln Differentiale](./pic/regeln_differential.PNG "Rechenregeln Differentiale")
 
 ### Monotonie
   * Gilt $f'(x) > 0$ in einem Intervall I, dann ist $f$ dort **streng monoton wachsend**. Im Fall $f'(x) \geqslant 0$ **monoton wachsend**.
@@ -550,7 +550,7 @@ Einen Vektor $\vec{x}(t)$ leitet man nach dem Parameter $t$ ab, indem man jede K
 Punkt eines Kreises wird auf einer Geraden abgerollt.\
 $\vec{x}(t)=\begin{bmatrix} x(t) \\ y(t) \end{bmatrix}=\begin{bmatrix} R(t-sin t) \\ R(1-cos t) \end{bmatrix}$,$0 \leqslant t \leqslant 2\pi$\
 
-![Zykloide](./pic/zykloide.PNG_TODO "Zykloide")
+![Zykloide](./pic/zykloide.PNG "Zykloide")
 
 ### Polarkoordinaten (SW7)
 **Polar- zu kartesischen Koordinaten**: 
@@ -562,7 +562,7 @@ $\vec{x}(t)=\begin{bmatrix} x(t) \\ y(t) \end{bmatrix}=\begin{bmatrix} R(t-sin t
   * $tan\phi=\frac{y}{x}$
 
 #### Kardioid
-![Kardioid](./pic/kardioid.PNG_TODO "Kardioid")
+![Kardioid](./pic/kardioid.PNG "Kardioid")
 
 #### Ableitung von Polarkoordinaten
 Die (gewöhnliche) Ableitung einer Funktion wird bestimmt, indem man die Polarkoordinaten in Parameterform transformiert.
@@ -607,22 +607,22 @@ $\lim\limits_{x\rightarrow a}\frac{f(x)}{g(x)}=\lim\limits_{x\rightarrow a}\frac
 ## Integralrechnung
 Im allgemeinen ist die Integralrechnung die Umkehrung der Differentialrechnung.\
 Mittels Integralen kann zum einen eine Fläche eines beliebigen Objektes berechnet werden und zum anderen die Bogenlänge. (ähnlich zum Umfang des Objektes)\
-![Integralrechnung](./pic/fig_4.5.0.png_TODO "fig 4.5.0")
+![Integralrechnung](./pic/fig_4.5.0.png "fig 4.5.0")
 
 ### Integrationstabelle
 Eine weitaus umfangreichere Liste kann auf https://en.wikipedia.org/wiki/Lists_of_integrals gefunden werden.\
 Zudem ist folgender Integralrechner empfehlenswert: https://www.integral-calculator.com \
-![Integrationstabelle](./pic/fig_4.4.0.png_TODO "fig 4.4.0")
+![Integrationstabelle](./pic/fig_4.4.0.png "fig 4.4.0")
 
 ### Integral als Summe (Riemannsche Summe)
 Die Fläche eines Integrals kann mittels der Riemannschen Summe gebildet werden. Dafür wird die Fläche in $n$ Intervalle aufgeteilt und zwischen der Untergrenze $a$ und der Obergrenze $b$ zusammengezählt.\
 **Untersumme**\
 Die Untersumme ist die Summer aller Rechtecke, welche den zu integrierenden Bogen nicht überschreiten (Die linke, obere Seite berührt den Bogen).\
-![Untersumme](./pic/fig_4.6.0.png_TODO "fig 4.6.0")
+![Untersumme](./pic/fig_4.6.0.png "fig 4.6.0")
 
 **Obersumme**\
 Die Obersumme ist die Summer aller Rechtecke, welche den zu integrierenden Bogen überschreiten (Die rechte, obere Seite berührt den Bogen).\
-![Obersumme](./pic/fig_4.7.0.png_TODO "fig 4.7.0")
+![Obersumme](./pic/fig_4.7.0.png "fig 4.7.0")
 
 Beispiel:\
 In diesem Beispiel wird aufgezeigt, wie das Integral $\int\limits_{0}^{1}x^2$ als Summe dargestellt werden kann.\
@@ -711,8 +711,8 @@ Parabelschar = Verallgemeinerung der möglichen Stammfunktionen: $y=x^2+C\ \ \ \
 Da beim integrieren nicht gesagt werden kann welche oder überhaupt konstante Zahlen bei der `Stammfunktion` $F(x)$ dabei war gibt es mehrere Möglichkeiten, wie die Funktion ausgesehen haben könnte.
 
 Bsp: $f(x)_0=x^2+2$ ist eine `Stammfunktion` von $2x$\
-Weitere Funktionen im Bild fig_4.1.0.svg_TODO dargtestellt:\
-![Stammfunktionen_beispiel](./pic/fig_4.1.0.svg_TODO "fig 4.1.0")
+Weitere Funktionen im Bild fig_4.1.0.svg dargtestellt:\
+![Stammfunktionen_beispiel](./pic/fig_4.1.0.svg "fig 4.1.0")
 
 Man sieht also, dass die Umkehrung einer `Differenzierung` mehrere Lösung haben kann. Darum ist das `Unbestimmte Integral` von $F(x)$ die Menge ALLER Stammfunktionen (`Parabelschar`) von $f(x)$.
 
@@ -785,7 +785,7 @@ Angenommen von einem Integral mit den Grenzen $1,2$ wurde $x^2$ substituiert,\
 $\int\limits_{1}^2f(x) \rightarrow \int\limits_{1}^4f(u)$\
 so müssen die Grenzen $1,2$ jeweils $1^2$ respektive $2^2$ gerechnet werden. Somit erhällt das Integral neu die Grenzen $1,4$.
 
-<img src="./pic/fig_4.3.0.png_TODO" alt="fig 4.3.0" width="600"/>
+<img src="./pic/fig_4.3.0.png" alt="fig 4.3.0" width="600"/>
 
 #### Zweite Substitutionsregel bei bestimmten Integralen
 Theorem: Es gilt: $\int\limits_{a}^bf(x)dx=\int\limits_{\phi^{-1}(a)}^{\phi^{-1}(b)}f(\phi(u))\phi'(u)du$
@@ -800,8 +800,8 @@ Das Integrieren funktioniert gleich wie bei der zweiten Substitutionsregel für 
 
 ### Bemerkungen zur Integralsubstitution
 
-<img src="./pic/fig_4.8.1.png_TODO" alt="fig 4.8.1" width="600"/>
-<img src="./pic/fig_4.8.2.png_TODO" alt="fig 4.8.2" width="600"/>
+<img src="./pic/fig_4.8.1.png" alt="fig 4.8.1" width="600"/>
+<img src="./pic/fig_4.8.2.png" alt="fig 4.8.2" width="600"/>
 
 ### Rechenregel für Integrale
 **Umkehrung**\
@@ -819,7 +819,7 @@ $\int\limits_{a}^b(f(x)\plusmn g(x))dx=\int\limits_{a}^bf(x)dx \plusmn \int\limi
 **Zerlegung des Integrationsintervalls**\
 Ist $f$ über einem geschlossenen Intervall, welches die Punkte $a, b, c$ enthält integrierbar, dann gilt:\
 $\int\limits_{a}^bf(x)dx=\int\limits_{a}^cf(x)dx+\int\limits_{c}^bf(x)dx$\
-![Stammfunktionen_beispiel](./pic/fig_4.2.0.svg_TODO "fig 4.2.0")
+![Stammfunktionen_beispiel](./pic/fig_4.2.0.svg "fig 4.2.0")
 
 ### Partielle Integration
 _Partielle Integration_ kann bei `bestimmten` wie auch bei `unbestimmten Integralen` gleich angewandt werden. **Einzig muss bei `bestimmten Integralen` an die Grenzen gedacht werden**. Diese müssen jedoch nicht umgeschrieben werden während dem partiellen Integrieren. Ziel ist es, dass das Integral auf der rechten (RHS) Seite eingacher wird.
@@ -887,10 +887,18 @@ def mw_lin(func, border):
 #mw_q(sp.sin(x), (x, 0, 2*sp.pi))
 ```
 ### Trapez-Reihen
-TODO:
+$\int\limits_a^b f(x) dx\sum\limits_{j=1}^n\frac{h}{2}(f(x_j-1)+f(x_j))$, wobei $h=\frac{b-a}{n}$
+
+#### Trapez min Fehler
+$\vert\varepsilon_T\vert= \biggl|\int\limits_a^bf(x)dx-I_T(h)\biggl|\leqslant\frac{(b-a)^3}{12n^2}max|f''(\xi)|=\frac{b-a}{12}h^2max|f''(\xi)|$
+
+Der Max Wert ist innerhalb der Integralsgrenzen auszuwählen.
 
 ### Simpson-Reihen
-TODO:
+$\int\limits_a^b f(x) dx \approx \frac{b-a}{3n}(f_0 + 4f_1 + 2f_2 + 4f_2 + ... + 2f_{n-2}+4f_{n-1} + f_n) = I_S(h)$, wobei $f_k = f(a+k\Delta x)$
+
+#### Simpson Fehler
+$\vert\varepsilon_T\vert= |I -I_S(h)|\leqslant \frac{(b-a)h^4}{180} max \biggl|f^{(4)}(x)\biggl| =\frac{(b-a)5}{180n^4} max \biggl|f^{(4)}(x)\biggl|$
 
 ### Bogenlänge eines Integrals
 Für die normale Bogenlänge kann folgende Formel genutzt werden:\
@@ -899,6 +907,8 @@ $L=\int\limits_{a}^{b}\sqrt{1+[f'(x)]^2}dx = \int\limits_{a}^{b}\sqrt{1+(\frac{d
 Für Bogenlege im Polarkoordinatensystem muss diese Formel genutzt werden:\
 $L=\int\limits_{\alpha}^{\beta}\sqrt{(r(\phi))^2+(r'(\phi))^2}d\phi$
 
+Wolfram: arclength r = phi from phi = 0 to phi = 1
+
 ```python
 import numpy as np
 import sympy as sp
@@ -906,7 +916,7 @@ sp.init_printing(use_latex='mathjax')
 x = sp.symbols("x")
 
 # This function only works for the arc length within the normal coordinate system.
-# It is not designed to use with polar coordinates
+# It is not designed to be used with polar coordinates
 def int_arc_length(function, range):
     integral = sp.Integral(sp.sqrt(1 + sp.diff(function) ** 2), range)
     print("Integral")
@@ -1047,7 +1057,7 @@ Genauso wie Funktionen können auch Potenzriehen abgeleitet werden. Dafür muss 
 **Beispiel**
 
 Beispiel anhand von $sin(x)$ zu $cos(x)$ ableiten:\
-![Potenzreihe_Ableiten](./pic/fig_5.0.0.png_TODO "fig 5.0.0")
+![Potenzreihe_Ableiten](./pic/fig_5.0.0.png "fig 5.0.0")
 
 ### Integrieren
 Genauso wie Funktionen können auch Potenzriehen integriert werden. Dafür muss Gliedweise integriert werden. Gleiches gilt auch für die definierende Summe der Reihe. Jedoch Kann die Summe auch einfach erneut abgelesen werden, nachdem man die Potenzreihe integriert hat.
@@ -1055,9 +1065,9 @@ Genauso wie Funktionen können auch Potenzriehen integriert werden. Dafür muss 
 **Beispiele**
 
 Beispiel anhand von $sin(x)$ zu $cos(x)$ integriern:\
-![Potenzreihe_Integrieren](./pic/fig_5.1.0.png_TODO "fig 5.1.0")
+![Potenzreihe_Integrieren](./pic/fig_5.1.0.png "fig 5.1.0")
 
-![Potenzreihe_Integrieren](./pic/fig_5.2.0.png_TODO "fig 5.2.0")
+![Potenzreihe_Integrieren](./pic/fig_5.2.0.png "fig 5.2.0")
 
 ### Substitution
 Kompliziertere Ausdrücke können mittels Substitution ersetzt werden.
@@ -1085,7 +1095,7 @@ $$
 
 Die `partiellen Ableitungen` von $f$ nach $x$ und $y$ an der Stelle $(x_0, y_0)$ sind nach dem oben Gesagten wie folgt definiert:
 
-![Partielle_Ableitung](./pic/fig_6.0.0.png_TODO "fig 6.0.0")
+![Partielle_Ableitung](./pic/fig_6.0.0.png "fig 6.0.0")
 
 Fasst man $x_0$ und $y_0$ wieder als Variablen auf, erhält man partiellen Ableitungsfunktionen $f_x(x, y)$ und $f_y(x, y)$. Oft verwendet man mit $z = f(x, y)$ alternative Bezeichnungen
 
