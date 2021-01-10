@@ -88,6 +88,8 @@ c: y-Achsenabschnitt
 ### Exponentialfunktionen
 Eine Funktion der $f(x) = a · b^x$ mit $b > 0$ und $b \ne 1$ heisst Exponentialfunktion. a heisst Anfangswert und b heisst Wachstumsfaktor. Für Definitions- und Wertebereich gilt: \
 $D(f) =\Reals, W(f) = \Reals+.$\
+**exponentielles Wachstum**: $A_t=A_0 *a^t$\
+$A_0$: Ausgangsgrösse im Zeitpunkt $t=0$, $a=1 \pm \frac{p}{100}$, p:prozentuale Zu-/Abnahme
 **Stammfunktion**: $y = a * e^{b*x}$\
 $a^x = b  |  x=\log_a(b)$\
 Exp: sehr schnelles Wachstum\
@@ -109,7 +111,7 @@ Die Logarithmusfunktionen sind nur für $x > 0$, d.h. nur in $\Reals+$ definiert
 
 $log_a 1=0$\
 $log_a a=1$\
-$a^(log_a b)=b$\
+$a^{log_ab}=b$\
 $log_a (a^n )=n$\
 $log_{10} = log$
 
@@ -164,9 +166,9 @@ $x_0: y=f(x_0)=0$\
 **horizontale Asymptote**: \
 Zählergrad > Nennergrad => Asymptote bei $y=0$, Beispiel: $\frac{2*(x^0)}{x}$\
 Zählgrad = Nennergrad => $\frac{4x^2}{2x^2}=\frac{4}{2}=>y=2$
-**schiefe Asymptote**: Zählergrad um 1 grösser als Nennergrad -> Polynomdivision
-Beispiel: 
-![Polynomdivision](./pic/polynomdivision.PNG "Polynomdivision")
+**schiefe Asymptote**: Zählergrad um 1 grösser als Nennergrad -> Polynomdivision\
+Beispiel: \
+![Polynomdivision](./pic/polynomdivision.PNG "Polynomdivision")\
 siehe anderes Beispiel: https://www.gut-erklaert.de/mathematik/polynomdivision.html
 
 ### Zusammengesetzte Funktion
@@ -218,6 +220,9 @@ Eindeutig beschrieben durch 2 Grössen:
 1. durch ein beliebiges Glied $a_n$ und die Differenz d, oder
 2. durch zwei beliebige Glieder $a_n$ und $a_{n+k}$.
 
+$d=a_{n+1}-a_n$\
+$a_n=a_1+(n-1)d$
+
 ### Summe der Glieder einer Arithmetischen Folge
 $a_1 + a_2 + ... + a_n = \sum\limits_{k=1}^na_k = na_1 + d\frac{n(n-1)}{2}=n\frac{a_1+a_n}{2}$\
 $n$: Anzahl Glieder\
@@ -238,6 +243,9 @@ $q = \frac{a_{n+1}}{a_n}$
 
 **Streng monoton zunehmend**: Jedes Glied ist grösser als das vorherige Glied ($a_{n+1} > a_n$)\
 **beschränkt**: Glieder sind auf einen gewissen Bereich ("Teppich") eingeschränkt, wird auch mit Epsilon $\epsilon$ gekennzeichnet: $|a_n| \leqslant c$
+
+### Spezielle Summen
+![Spezielle Summen](./pic/spezielle_summen.jpg "Spezielle Summen")
 
 ### Grenzwert einer Folge - Rechenregeln
 Falls die Folge ($a_n$) gegen a und die Folge ($b_n$) gegen b konvergiert (annähert)
@@ -262,6 +270,8 @@ Beispiel:\
 ### Folge der n-ten Partialsummen
 Bedeutet n Glieder addieren. Mithilfe der Summe einer endlichen geometrischen Reihe.\
 $a_1+a_{1q}+a_{1q^2}+...+a_{1q^{n-1}}=\sum\limits_{k=0}^{n-1}a_1q^k=a_1\frac{q^n-1}{q-1}$\
+Für den Grenzwert dieser Folge findet man: \
+$s=\lim\limits_{n \rightarrow \infty}s_n=\lim\limits_{n \rightarrow \infty} a_1\frac{1-q^n}{1-q}=\frac{a_1}{1-q}\lim\limits_{n\rightarrow \infty}(1-q^n)$\
 $a_1$: 1. Glied, $n$: Anzahl Glieder, $q$: Quotient\
 Bei Anwendung der Formel kann $n\rightarrow \infty$ verwendet werden, so erhält man unendlich viele Glieder.\
 Falls Grenzwert exisitert:\
@@ -602,7 +612,10 @@ $\lim\limits_{x\rightarrow a}\frac{f(x)}{g(x)}=\lim\limits_{x\rightarrow a}\frac
 
   * Unbestimmte Ausdrücke der Form $0 *\infty$ bringt man mittels der Identität $f(x)g(x)=\frac{f(x)}{\frac{1}{g(x)}}$ auf einen unbestimmten Ausdruck der Form 0/0.
   * Unbestimmte Ausdrücke der Form $\infty-\infty$ lassen oft durch geeignete algebraische Umformungen auf unbestimmte Ausdrücke der Form 0/0 zurückführen.
-  * Unbestimmte Ausdrücke der Form $0^0$, $\infty ^0$ und $1^{\infty}$ schreiben wir in der Form $y = f(x)g(x)$, logarithmieren beide Seiten und erhalten dann mit $ln y = g(x) · ln(f(x))$ einen der oben besprochenen unbestimmten Ausdrücke.
+  * Unbestimmte Ausdrücke der Form $0^0$, $\infty ^0$ und $1^{\infty}$ schreiben wir in der Form $y = f(x)g(x)$, logarithmieren beide Seiten und erhalten dann mit $ln y = g(x) · ln(f(x))$ einen der oben besprochenen unbestimmten Ausdrücke.\
+
+![Regel de L'Hôpital](./pic/regel_lhopital.PNG "Regel de L'Hôpital")
+
 
 ## Integralrechnung
 Im allgemeinen ist die Integralrechnung die Umkehrung der Differentialrechnung.\
@@ -618,10 +631,14 @@ Zudem ist folgender Integralrechner empfehlenswert: https://www.integral-calcula
 Die Fläche eines Integrals kann mittels der Riemannschen Summe gebildet werden. Dafür wird die Fläche in $n$ Intervalle aufgeteilt und zwischen der Untergrenze $a$ und der Obergrenze $b$ zusammengezählt.\
 **Untersumme**\
 Die Untersumme ist die Summer aller Rechtecke, welche den zu integrierenden Bogen nicht überschreiten (Die linke, obere Seite berührt den Bogen).\
+Formel: $\Delta A_k = f(x_{k-1})\Delta x$ \
+\
 ![Untersumme](./pic/fig_4.6.0.png "fig 4.6.0")
 
 **Obersumme**\
 Die Obersumme ist die Summer aller Rechtecke, welche den zu integrierenden Bogen überschreiten (Die rechte, obere Seite berührt den Bogen).\
+Formel: $\Delta A_k = f(x_{k})\Delta x$ \
+\
 ![Obersumme](./pic/fig_4.7.0.png "fig 4.7.0")
 
 Beispiel:\
@@ -1377,10 +1394,6 @@ $arctanh = \frac{1}{\sqrt{1-x^2}}$\
 Wird genutzt, wenn $x>1$.
 
 
-
-
-
-
 #### Masse
 Formel für Masse ist:\
 $m=\rho V$
@@ -1389,8 +1402,6 @@ Bei einer Kugel wäre das:\
 $m=\rho \cdot V= \rho \frac{4\pi}{3}*R^3=m(R)$
 
 Rel error: = $\frac{m'}{m}$ im Kugelfall: $\frac{\rho 4 \pi R^2dr}{\rho \frac{4\pi}{3}R^3} \rArr$ dann kann man fast alles streichen... 
-
-
 
 
 
