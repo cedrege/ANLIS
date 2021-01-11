@@ -424,10 +424,10 @@ Funktionen nicht stetig ist.
 
 ### Regula Falsi
 Regula Falsi wird verwendet, um sich einer Nullstellen anzunähern. Eine Funktion in einem Intervall [a, b] hat eine Nullstelle, wenn sie stetig ist und wenn die beiden Werte eingesetzt in die Funktion f 1x positiv und 1x negativ sind ($f(a)f(b)<0$)
-1. 2 Werte bestimmen, wo die Nullstelle dazwischen ist, bspw. $x_0$ und $x_1$. Darauf achten, dass die Vorzeichen der eingesetzten Werte in f, also $f(x_0)$ und $f(x_1)$ ,unterschiedlich sein müssen.
+1. Zwei Werte bestimmen, wo die Nullstelle dazwischen ist, bspw. $x_0$ und $x_1$. Darauf achten, dass die Vorzeichen der eingesetzten Werte in f, also $f(x_0)$ und $f(x_1)$ ,unterschiedlich sein müssen.
 2. Werte in die Formel einsetzen
-$x_{neu}=\frac{x_0f(x_1)-x_1f(x_0)}{f(x_1)-f(x_0)}$
-3. 2 neue Werte wählen, bspw. $x_{neu} = x_2$ und $x_1$, Schritt wiederholen
+$x_{neu}=\frac{x_0f(x_1)-x_1f(x_0)}{f(x_1)-f(x_0)}=a-f(a)\frac{b-a}{f(b)-f(a)}$, wobei $a=x_0$ und $b=x_1$, wie bei einem Intervall
+3. Zwei neue Werte wählen, bspw. $x_{neu} = x_2$ und $x_1$, Schritt wiederholen
 
 Geht auch in Python!
 
